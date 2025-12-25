@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 30% 8%;
+    --foreground: 40 30% 96%;
+
+    --card: 210 25% 12%;
+    --card-foreground: 40 30% 96%;
+
+    --popover: 210 25% 12%;
+    --popover-foreground: 40 30% 96%;
+
+    --primary: 0 75% 55%;
+    --primary-foreground: 40 30% 96%;
+
+    --secondary: 145 60% 35%;
+    --secondary-foreground: 40 30% 96%;
+
+    --muted: 210 20% 18%;
+    --muted-foreground: 210 15% 60%;
+
+    --accent: 42 90% 55%;
+    --accent-foreground: 210 30% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 22%;
+    --input: 210 20% 22%;
+    --ring: 0 75% 55%;
+
+    --radius: 1rem;
+
+    /* Christmas Design Tokens */
+    --christmas-red: 0 75% 55%;
+    --christmas-red-dark: 0 80% 40%;
+    --christmas-green: 145 60% 35%;
+    --christmas-green-light: 145 50% 45%;
+    --christmas-gold: 42 90% 55%;
+    --christmas-gold-light: 45 95% 65%;
+    --christmas-cream: 40 30% 96%;
+    --christmas-snow: 210 30% 95%;
+    
+    /* Gradients */
+    --gradient-christmas: linear-gradient(135deg, hsl(var(--christmas-red)) 0%, hsl(var(--christmas-red-dark)) 100%);
+    --gradient-festive: linear-gradient(135deg, hsl(var(--christmas-green)) 0%, hsl(var(--christmas-green-light)) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--christmas-gold)) 0%, hsl(var(--christmas-gold-light)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(210 25% 14%) 0%, hsl(210 25% 10%) 100%);
+    --gradient-hero: radial-gradient(ellipse at 50% 0%, hsl(var(--christmas-red) / 0.15) 0%, transparent 60%);
+    
+    /* Glows */
+    --glow-red: 0 0 40px hsl(var(--christmas-red) / 0.4), 0 0 80px hsl(var(--christmas-red) / 0.2);
+    --glow-green: 0 0 40px hsl(var(--christmas-green) / 0.4), 0 0 80px hsl(var(--christmas-green) / 0.2);
+    --glow-gold: 0 0 40px hsl(var(--christmas-gold) / 0.5), 0 0 80px hsl(var(--christmas-gold) / 0.3);
+    
+    /* Shadows */
+    --shadow-card: 0 25px 50px -12px hsl(0 0% 0% / 0.5), 0 0 0 1px hsl(var(--border));
+    --shadow-glow: 0 0 60px hsl(var(--christmas-red) / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html, body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient-christmas {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-christmas);
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
+  }
+
+  .text-gradient-festive {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-festive);
+  }
+
+  .bg-gradient-christmas {
+    background-image: var(--gradient-christmas);
+  }
+
+  .bg-gradient-festive {
+    background-image: var(--gradient-festive);
+  }
+
+  .bg-gradient-gold {
+    background-image: var(--gradient-gold);
+  }
+
+  .bg-gradient-card {
+    background-image: var(--gradient-card);
+  }
+
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+
+  .glow-red {
+    box-shadow: var(--glow-red);
+  }
+
+  .glow-green {
+    box-shadow: var(--glow-green);
+  }
+
+  .glow-gold {
+    box-shadow: var(--glow-gold);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glass {
+    @apply backdrop-blur-xl;
+    background: hsl(var(--card) / 0.7);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .glass-strong {
+    @apply backdrop-blur-2xl;
+    background: hsl(var(--card) / 0.85);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+    background-size: 200% 100%;
+  }
+
+  .animate-snow {
+    animation: snow 10s linear infinite;
+  }
+
+  .animate-twinkle {
+    animation: twinkle 2s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.8;
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes snow {
+  0% {
+    transform: translateY(-10vh) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(20px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}
