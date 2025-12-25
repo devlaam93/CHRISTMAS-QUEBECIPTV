@@ -15,15 +15,15 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section id="features" className="py-24 relative">
+    <section id="features" className="py-24 relative bg-xmas-pattern">
       <div className="container mx-auto px-4">
         <ScrollReveal animation="fade-up" duration={700}>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-4 py-2 rounded-lg card-dark text-sm font-medium text-fire-amber mb-4 font-body border-fire-amber/30">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border-2 border-xmas-green/30 text-sm font-bold text-xmas-green mb-4 font-body shadow-md">
               ⚡ Avantages
             </span>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-              Pourquoi Choisir <span className="text-gradient-fire">Quebec IPTV</span>?
+              Pourquoi Choisir <span className="text-gradient-green">Quebec IPTV</span>?
             </h2>
             <p className="text-muted-foreground font-body">
               Une expérience de streaming premium conçue pour les canadiens

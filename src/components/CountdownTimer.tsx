@@ -31,10 +31,10 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
   }, [targetDate]);
 
   const timeUnits = [
-    { value: timeLeft.days, label: 'JOURS' },
-    { value: timeLeft.hours, label: 'HEURES' },
-    { value: timeLeft.minutes, label: 'MIN' },
-    { value: timeLeft.seconds, label: 'SEC' },
+    { value: timeLeft.days, label: 'JOURS', color: 'xmas-red' },
+    { value: timeLeft.hours, label: 'HEURES', color: 'xmas-green' },
+    { value: timeLeft.minutes, label: 'MIN', color: 'xmas-red' },
+    { value: timeLeft.seconds, label: 'SEC', color: 'xmas-green' },
   ];
 
   return (
@@ -42,14 +42,14 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
       {timeUnits.map((unit, index) => (
         <div key={unit.label} className="flex flex-col items-center">
           <div 
-            className="card-dark w-16 h-20 md:w-20 md:h-24 flex flex-col items-center justify-center animate-pulse-glow"
-            style={{ animationDelay: `${index * 0.3}s` }}
+            className={`bg-white border-4 ${index % 2 === 0 ? 'border-xmas-red/30' : 'border-xmas-green/30'} w-18 h-24 md:w-22 md:h-28 flex flex-col items-center justify-center rounded-2xl shadow-lg animate-glow-pulse`}
+            style={{ animationDelay: `${index * 0.2}s`, width: '72px', height: '88px' }}
           >
-            <span className="text-2xl md:text-4xl font-display font-bold text-gradient-fire">
+            <span className={`text-3xl md:text-4xl font-display font-bold ${index % 2 === 0 ? 'text-xmas-red' : 'text-xmas-green'}`}>
               {String(unit.value).padStart(2, '0')}
             </span>
           </div>
-          <span className="text-[10px] text-muted-foreground mt-2 font-medium tracking-widest font-body">
+          <span className={`text-[10px] mt-2 font-bold tracking-widest font-body ${index % 2 === 0 ? 'text-xmas-red' : 'text-xmas-green'}`}>
             {unit.label}
           </span>
         </div>

@@ -18,11 +18,11 @@ const TestimonialsSection = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-1 mb-4">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-fire-amber text-fire-amber" />
+                <Star key={i} className="w-6 h-6 fill-xmas-gold text-xmas-gold" />
               ))}
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-              Avis de Nos <span className="text-gradient-fire">Clients</span>
+              Avis de Nos <span className="text-gradient-xmas">Clients</span>
             </h2>
             <p className="text-muted-foreground font-body">
               Plus de 50 000 Canadiens nous font confiance
@@ -33,20 +33,20 @@ const TestimonialsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <ScrollReveal key={index} animation="fade-up" delay={index * 100} duration={600}>
-              <div className="h-full card-dark p-6 hover:border-fire-orange/30 transition-all duration-300">
-                <Quote className="w-8 h-8 text-fire-orange/20 mb-4" />
+              <div className="h-full bg-white p-6 rounded-3xl border-2 border-xmas-green/20 hover:border-xmas-red/30 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <Quote className="w-8 h-8 text-xmas-red/20 mb-4" />
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-fire-amber text-fire-amber" />
+                    <Star key={i} className="w-4 h-4 fill-xmas-gold text-xmas-gold" />
                   ))}
                 </div>
                 <p className="text-foreground/80 text-sm leading-relaxed mb-5 font-body">"{testimonial.text}"</p>
-                <div className="flex items-center gap-3 pt-4 border-t border-border/30">
-                  <div className="w-10 h-10 rounded-full bg-gradient-fire flex items-center justify-center text-sm font-bold text-background font-body">
+                <div className="flex items-center gap-3 pt-4 border-t border-border/50">
+                  <div className="w-10 h-10 rounded-full bg-gradient-xmas flex items-center justify-center text-sm font-bold text-white font-body shadow-md">
                     {testimonial.avatar}
                   </div>
                   <div>
-                    <p className="font-semibold text-sm text-foreground">{testimonial.name}</p>
+                    <p className="font-bold text-sm text-foreground">{testimonial.name}</p>
                     <p className="text-xs text-muted-foreground font-body">{testimonial.location}</p>
                   </div>
                 </div>

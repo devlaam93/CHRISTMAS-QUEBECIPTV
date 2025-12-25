@@ -1,4 +1,4 @@
-import { Menu, X, Flame } from 'lucide-react';
+import { Menu, X, Gift, TreePine } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/quebec-iptv-logo.png';
@@ -25,16 +25,16 @@ const Header = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300`}>
       {/* Promo Banner */}
-      <div className={`bg-gradient-fire overflow-hidden transition-all duration-300 ${scrolled ? 'max-h-0 opacity-0' : 'max-h-12 opacity-100'}`}>
-        <p className="py-2.5 text-xs md:text-sm font-semibold text-background flex items-center justify-center gap-2 font-body">
-          <Flame className="w-4 h-4 animate-flicker" />
-          🔥 OFFRE EXPLOSIVE — 80% RABAIS + 1 Mois GRATUIT 🔥
-          <Flame className="w-4 h-4 animate-flicker" />
+      <div className={`bg-gradient-xmas overflow-hidden transition-all duration-300 ${scrolled ? 'max-h-0 opacity-0' : 'max-h-12 opacity-100'}`}>
+        <p className="py-2.5 text-xs md:text-sm font-bold text-white flex items-center justify-center gap-2 font-body">
+          <Gift className="w-4 h-4 animate-bounce-slow" />
+          🎄 OFFRE DE NOËL — 80% RABAIS + 1 Mois GRATUIT 🎁
+          <TreePine className="w-4 h-4 animate-sway" />
         </p>
       </div>
 
       {/* Main Header */}
-      <div className={`transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-xl border-b border-border/50' : 'bg-background/80 backdrop-blur-md'}`}>
+      <div className={`transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-xmas-green/20' : 'bg-white/80 backdrop-blur-md'}`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <a href="#" className="flex items-center">
@@ -46,7 +46,7 @@ const Header = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-fire-orange transition-colors font-body"
+                  className="text-sm font-semibold text-foreground hover:text-xmas-red transition-colors font-body"
                 >
                   {link.label}
                 </a>
@@ -55,16 +55,16 @@ const Header = () => {
 
             <div className="hidden lg:block">
               <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer">
-                <Button className="btn-fire rounded-lg px-6 font-body">
-                  Essai Gratuit 🔥
+                <Button className="btn-xmas rounded-full px-6 font-body">
+                  Essai Gratuit 🎁
                 </Button>
               </a>
             </div>
 
             <div className="flex items-center gap-3 lg:hidden">
               <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer" className="hidden sm:block">
-                <Button size="sm" className="btn-fire rounded-lg text-xs font-body">
-                  Essai 🔥
+                <Button size="sm" className="btn-xmas rounded-full text-xs font-body">
+                  Essai 🎁
                 </Button>
               </a>
               <button className="p-2 text-foreground" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -75,21 +75,21 @@ const Header = () => {
         </div>
 
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-card border-t border-border/50">
+          <div className="lg:hidden bg-white border-t border-xmas-green/20 shadow-lg">
             <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-fire-orange transition-colors py-2 font-body"
+                  className="text-sm font-semibold text-foreground hover:text-xmas-red transition-colors py-2 font-body"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
               <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer">
-                <Button className="btn-fire rounded-lg w-full mt-2 font-body">
-                  Essai Gratuit 🔥
+                <Button className="btn-xmas rounded-full w-full mt-2 font-body">
+                  Essai Gratuit 🎁
                 </Button>
               </a>
             </nav>

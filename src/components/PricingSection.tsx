@@ -1,4 +1,4 @@
-import { Check, Crown, Zap, Shield, Tv, Film, Headphones, ArrowRight } from 'lucide-react';
+import { Check, Crown, Zap, Shield, Tv, Film, Headphones, ArrowRight, Gift } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ScrollReveal from './ScrollReveal';
 import paymentBadges from '@/assets/payment-badges.webp';
@@ -45,15 +45,16 @@ const PricingSection = () => {
   ];
 
   return (
-    <section id="pricing" className="py-24 relative">
+    <section id="pricing" className="py-24 relative bg-xmas-pattern">
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 rounded-lg card-dark text-sm font-medium text-fire-orange mb-4 font-body border-fire-orange/30">
-              🔥 Forfaits Explosifs
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border-2 border-xmas-red/30 text-sm font-bold text-xmas-red mb-4 font-body shadow-md">
+              <Gift className="w-4 h-4" />
+              🎁 Forfaits de Noël
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">
-              Choisissez Votre <span className="text-gradient-fire">Forfait</span>
+              Choisissez Votre <span className="text-gradient-xmas">Forfait</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto font-body">
               Deux options pour un divertissement illimité au Canada
@@ -63,50 +64,50 @@ const PricingSection = () => {
 
         {/* Comparison Table */}
         <ScrollReveal delay={0.2}>
-          <div className="card-dark overflow-hidden mb-16">
+          <div className="bg-white rounded-3xl shadow-xl border-2 border-xmas-green/20 overflow-hidden mb-16">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-border/30">
+                  <tr className="border-b-2 border-xmas-green/20">
                     <th className="text-left p-5 text-foreground font-display text-lg">Fonctionnalités</th>
                     <th className="text-center p-5 w-36">
                       <div className="flex flex-col items-center">
-                        <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center mb-2">
-                          <Zap className="w-5 h-5 text-fire-amber" />
+                        <div className="w-12 h-12 rounded-2xl bg-gradient-green flex items-center justify-center mb-2 shadow-md">
+                          <Zap className="w-6 h-6 text-white" />
                         </div>
-                        <span className="text-fire-amber font-display">Standard</span>
+                        <span className="text-xmas-green font-display font-bold">Standard</span>
                       </div>
                     </th>
-                    <th className="text-center p-5 w-36 bg-fire-orange/5">
+                    <th className="text-center p-5 w-36 bg-xmas-red/5">
                       <div className="flex flex-col items-center">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-fire flex items-center justify-center mb-2">
-                          <Crown className="w-5 h-5 text-background" />
+                        <div className="w-12 h-12 rounded-2xl bg-gradient-xmas flex items-center justify-center mb-2 shadow-md">
+                          <Crown className="w-6 h-6 text-white" />
                         </div>
-                        <span className="text-fire-orange font-display">Premium</span>
-                        <span className="text-[10px] text-fire-amber mt-1 font-body">🔥 POPULAIRE</span>
+                        <span className="text-xmas-red font-display font-bold">Premium</span>
+                        <span className="text-[10px] text-xmas-gold mt-1 font-body font-bold">⭐ POPULAIRE</span>
                       </div>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {features.map((feature) => (
-                    <tr key={feature.name} className="border-b border-border/20 hover:bg-muted/30 transition-colors">
+                    <tr key={feature.name} className="border-b border-border/50 hover:bg-muted/30 transition-colors">
                       <td className="p-4 text-muted-foreground flex items-center gap-2 font-body text-sm">
-                        {feature.icon && <feature.icon className="w-4 h-4 text-fire-orange/60" />}
+                        {feature.icon && <feature.icon className="w-4 h-4 text-xmas-green/60" />}
                         {feature.name}
                       </td>
                       <td className="text-center p-4">
                         {typeof feature.standard === 'boolean' ? (
-                          feature.standard ? <Check className="w-5 h-5 text-fire-amber mx-auto" /> : <span className="text-muted-foreground/30">—</span>
+                          feature.standard ? <Check className="w-5 h-5 text-xmas-green mx-auto" /> : <span className="text-muted-foreground/30">—</span>
                         ) : (
-                          <span className="text-fire-amber font-semibold font-body text-sm">{feature.standard}</span>
+                          <span className="text-xmas-green font-bold font-body text-sm">{feature.standard}</span>
                         )}
                       </td>
-                      <td className="text-center p-4 bg-fire-orange/5">
+                      <td className="text-center p-4 bg-xmas-red/5">
                         {typeof feature.premium === 'boolean' ? (
-                          feature.premium ? <Check className="w-5 h-5 text-fire-orange mx-auto" /> : <span className="text-muted-foreground/30">—</span>
+                          feature.premium ? <Check className="w-5 h-5 text-xmas-red mx-auto" /> : <span className="text-muted-foreground/30">—</span>
                         ) : (
-                          <span className="text-fire-orange font-semibold font-body text-sm">{feature.premium}</span>
+                          <span className="text-xmas-red font-bold font-body text-sm">{feature.premium}</span>
                         )}
                       </td>
                     </tr>
@@ -121,37 +122,37 @@ const PricingSection = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {plans.map((plan, planIndex) => (
             <ScrollReveal key={plan.type} delay={0.1 * planIndex}>
-              <div className={`relative card-dark p-8 ${plan.popular ? 'ring-2 ring-fire-orange/50 glow-orange' : ''}`}>
+              <div className={`relative bg-white p-8 rounded-3xl shadow-xl ${plan.popular ? 'ring-4 ring-xmas-red/30 glow-red' : 'border-2 border-xmas-green/30'}`}>
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-fire text-background px-4 py-1 rounded-lg text-xs font-semibold font-body">
-                    🔥 RECOMMANDÉ
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-xmas text-white px-6 py-2 rounded-full text-sm font-bold font-body shadow-lg">
+                    🎄 RECOMMANDÉ
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <div className={`w-14 h-14 rounded-xl ${plan.popular ? 'bg-gradient-fire' : 'bg-muted'} flex items-center justify-center mx-auto mb-4`}>
-                    <plan.icon className={`w-7 h-7 ${plan.popular ? 'text-background' : 'text-fire-amber'}`} />
+                  <div className={`w-16 h-16 rounded-2xl ${plan.popular ? 'bg-gradient-xmas' : 'bg-gradient-green'} flex items-center justify-center mx-auto mb-4 shadow-lg`}>
+                    <plan.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className={`text-2xl font-display font-bold ${plan.popular ? 'text-fire-orange' : 'text-fire-amber'}`}>{plan.title}</h3>
+                  <h3 className={`text-2xl font-display font-bold ${plan.popular ? 'text-xmas-red' : 'text-xmas-green'}`}>{plan.title}</h3>
                   <p className="text-muted-foreground text-sm font-body mt-1">{plan.subtitle}</p>
                 </div>
 
                 <div className="space-y-4">
                   {plan.options.map((option) => (
-                    <div key={option.duration} className={`p-5 rounded-xl transition-all ${option.popular ? 'bg-fire-orange/10 border border-fire-orange/30' : 'bg-muted/30 border border-border/30'}`}>
+                    <div key={option.duration} className={`p-5 rounded-2xl transition-all ${option.popular ? 'bg-xmas-red/10 border-2 border-xmas-red/30' : 'bg-muted/50 border-2 border-border/50'}`}>
                       <div className="flex justify-between items-center mb-3">
-                        <span className="font-semibold text-foreground font-body">{option.duration}</span>
-                        <span className="bg-gradient-fire text-background text-xs px-2 py-1 rounded font-body">
+                        <span className="font-bold text-foreground font-body">{option.duration}</span>
+                        <span className="bg-gradient-xmas text-white text-xs px-3 py-1 rounded-full font-bold font-body">
                           -{option.discount}
                         </span>
                       </div>
                       <div className="flex items-end gap-2 mb-4">
                         <span className="text-3xl font-display font-bold text-foreground">${option.price}</span>
                         <span className="text-muted-foreground line-through text-sm font-body mb-1">${option.originalPrice}</span>
-                        <span className="text-fire-amber text-xs font-body mb-1 ml-auto">+1 MOIS GRATUIT</span>
+                        <span className="text-xmas-gold text-xs font-bold font-body mb-1 ml-auto">🎁 +1 MOIS GRATUIT</span>
                       </div>
                       <a href={option.link} target="_blank" rel="noopener noreferrer">
-                        <Button className={`w-full rounded-lg font-body group ${option.popular ? 'btn-fire' : 'bg-muted hover:bg-muted/80 text-foreground'}`}>
+                        <Button className={`w-full rounded-full font-body group ${option.popular ? 'btn-xmas' : 'btn-green'}`}>
                           Commander
                           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                         </Button>
@@ -166,8 +167,8 @@ const PricingSection = () => {
 
         <ScrollReveal delay={0.4}>
           <div className="mt-12 text-center">
-            <p className="text-muted-foreground text-sm mb-4 font-body">Paiement 100% sécurisé</p>
-            <img src={paymentBadges} alt="Méthodes de paiement" className="h-8 mx-auto opacity-50" />
+            <p className="text-muted-foreground text-sm mb-4 font-body">🔒 Paiement 100% sécurisé</p>
+            <img src={paymentBadges} alt="Méthodes de paiement" className="h-8 mx-auto opacity-60" />
           </div>
         </ScrollReveal>
       </div>

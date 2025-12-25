@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Outfit', 'sans-serif'],
-        body: ['DM Sans', 'sans-serif'],
+        display: ['Fredoka', 'sans-serif'],
+        body: ['Nunito', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,13 +51,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        fire: {
-          orange: "hsl(var(--fire-orange))",
-          "orange-light": "hsl(var(--fire-orange-light))",
-          "orange-dark": "hsl(var(--fire-orange-dark))",
-          amber: "hsl(var(--fire-amber))",
-          yellow: "hsl(var(--fire-yellow))",
-          red: "hsl(var(--fire-red))",
+        xmas: {
+          red: "hsl(var(--xmas-red))",
+          "red-light": "hsl(var(--xmas-red-light))",
+          "red-dark": "hsl(var(--xmas-red-dark))",
+          green: "hsl(var(--xmas-green))",
+          "green-light": "hsl(var(--xmas-green-light))",
+          "green-dark": "hsl(var(--xmas-green-dark))",
+          gold: "hsl(var(--xmas-gold))",
+          "gold-light": "hsl(var(--xmas-gold-light))",
+          cream: "hsl(var(--xmas-cream))",
+          snow: "hsl(var(--xmas-snow))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
