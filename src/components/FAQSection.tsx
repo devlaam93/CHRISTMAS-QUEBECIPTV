@@ -36,21 +36,22 @@ const FAQSection = () => {
 
   return (
     <section id="faq" className="py-20 md:py-32 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/10 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-christmas-green/5 to-background" />
       
-      {/* Decorative elements */}
-      <div className="absolute top-20 left-10 text-3xl opacity-20 animate-float">🍁</div>
-      <div className="absolute bottom-20 right-10 text-3xl opacity-20 animate-float" style={{ animationDelay: '-2s' }}>📺</div>
+      {/* Christmas decorations */}
+      <div className="absolute top-20 left-10 text-3xl opacity-40 animate-swing">🎄</div>
+      <div className="absolute bottom-20 right-10 text-3xl opacity-40 animate-float" style={{ animationDelay: '-2s' }}>🎁</div>
+      <div className="absolute top-1/3 right-20 text-2xl opacity-30 animate-twinkle">❄️</div>
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <ScrollReveal animation="fade-up" duration={700}>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-black mb-6">
-              Questions <span className="text-quebec-orange">Fréquentes</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+              Questions <span className="text-christmas-gold">Fréquentes</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
-              🍁 Vous avez des questions? Nous avons les réponses. Si vous ne trouvez pas ce que vous cherchez, 
+            <p className="text-lg text-muted-foreground font-body">
+              🎄 Vous avez des questions? Nous avons les réponses. Si vous ne trouvez pas ce que vous cherchez, 
               contactez notre équipe de support 24/7.
             </p>
           </div>
@@ -68,12 +69,12 @@ const FAQSection = () => {
               >
                 <AccordionItem 
                   value={`item-${index}`}
-                  className="glass border border-border/50 rounded-xl px-6 data-[state=open]:border-quebec-orange/50 transition-colors"
+                  className="christmas-border rounded-xl px-6 data-[state=open]:ring-1 data-[state=open]:ring-christmas-gold/50 transition-all bg-card/30"
                 >
-                  <AccordionTrigger className="text-left font-display font-semibold hover:text-quebec-orange transition-colors py-5">
+                  <AccordionTrigger className="text-left font-display font-semibold hover:text-christmas-gold transition-colors py-5">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-5">
+                  <AccordionContent className="text-muted-foreground pb-5 font-body">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

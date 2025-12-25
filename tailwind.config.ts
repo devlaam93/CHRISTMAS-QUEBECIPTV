@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Playfair Display', 'serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['Cinzel Decorative', 'cursive'],
+        body: ['Poppins', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,14 +51,22 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        christmas: {
+          red: "hsl(var(--christmas-red))",
+          "red-dark": "hsl(var(--christmas-red-dark))",
+          "red-light": "hsl(var(--christmas-red-light))",
+          green: "hsl(var(--christmas-green))",
+          "green-dark": "hsl(var(--christmas-green-dark))",
+          "green-light": "hsl(var(--christmas-green-light))",
+          gold: "hsl(var(--christmas-gold))",
+          "gold-light": "hsl(var(--christmas-gold-light))",
+          snow: "hsl(var(--christmas-snow))",
+          cream: "hsl(var(--christmas-cream))",
+          holly: "hsl(var(--christmas-holly))",
+        },
         quebec: {
-          orange: "hsl(var(--quebec-orange))",
-          "orange-dark": "hsl(var(--quebec-orange-dark))",
-          "orange-light": "hsl(var(--quebec-orange-light))",
-          gold: "hsl(var(--quebec-gold))",
-          "gold-light": "hsl(var(--quebec-gold-light))",
-          cream: "hsl(var(--quebec-cream))",
-          snow: "hsl(var(--quebec-snow))",
+          blue: "hsl(var(--quebec-blue))",
+          white: "hsl(var(--quebec-white))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -87,15 +95,15 @@ export default {
         },
         "glow-pulse": {
           "0%, 100%": { 
-            boxShadow: "0 0 20px hsl(var(--quebec-orange) / 0.5), 0 0 40px hsl(var(--quebec-orange) / 0.3)" 
+            boxShadow: "0 0 20px hsl(var(--christmas-gold) / 0.5), 0 0 40px hsl(var(--christmas-gold) / 0.3)" 
           },
           "50%": { 
-            boxShadow: "0 0 40px hsl(var(--quebec-orange) / 0.7), 0 0 80px hsl(var(--quebec-orange) / 0.5)" 
+            boxShadow: "0 0 40px hsl(var(--christmas-gold) / 0.7), 0 0 80px hsl(var(--christmas-gold) / 0.5)" 
           },
         },
         "border-glow": {
-          "0%, 100%": { borderColor: "hsl(var(--quebec-orange))" },
-          "50%": { borderColor: "hsl(var(--quebec-gold))" },
+          "0%, 100%": { borderColor: "hsl(var(--christmas-red))" },
+          "50%": { borderColor: "hsl(var(--christmas-green))" },
         },
         "scale-in": {
           "0%": { transform: "scale(0.9)", opacity: "0" },
@@ -105,6 +113,10 @@ export default {
           "0%": { transform: "translateY(20px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
+        "ornament-swing": {
+          "0%, 100%": { transform: "rotate(-8deg)" },
+          "50%": { transform: "rotate(8deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -113,6 +125,7 @@ export default {
         "border-glow": "border-glow 3s ease-in-out infinite",
         "scale-in": "scale-in 0.5s ease-out forwards",
         "slide-up": "slide-up 0.5s ease-out forwards",
+        "ornament-swing": "ornament-swing 3s ease-in-out infinite",
       },
     },
   },

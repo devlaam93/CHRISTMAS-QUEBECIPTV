@@ -57,19 +57,20 @@ const FeaturesSection = () => {
 
   return (
     <section id="features" className="py-20 md:py-32 relative">
-      {/* Decorative elements */}
-      <div className="absolute top-10 right-20 text-3xl opacity-20 animate-float">⭐</div>
-      <div className="absolute bottom-10 left-20 text-3xl opacity-20 animate-float" style={{ animationDelay: '-2s' }}>🍁</div>
+      {/* Christmas decorations */}
+      <div className="absolute top-10 right-20 text-3xl opacity-40 animate-float">⭐</div>
+      <div className="absolute bottom-10 left-20 text-3xl opacity-40 animate-swing" style={{ animationDelay: '-2s' }}>🎄</div>
+      <div className="absolute top-1/2 left-10 text-2xl opacity-30 animate-twinkle">❄️</div>
       
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <ScrollReveal animation="fade-up" duration={700}>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-black mb-6">
-              Pourquoi Choisir <span className="text-quebec-orange">Quebec IPTV?</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+              Pourquoi Choisir <span className="text-christmas-red">Quebec IPTV</span>?
             </h2>
-            <p className="text-lg text-muted-foreground">
-              🍁 Nous sommes le meilleur fournisseur IPTV au Canada, offrant un streaming fiable avec une vidéo de haute qualité 
+            <p className="text-lg text-muted-foreground font-body">
+              🎄 Nous sommes le meilleur fournisseur IPTV au Canada, offrant un streaming fiable avec une vidéo de haute qualité 
               qui donne vie à votre divertissement préféré.
             </p>
           </div>

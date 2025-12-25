@@ -14,14 +14,14 @@ const Snowfall = () => {
 
   useEffect(() => {
     const flakes: Snowflake[] = [];
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 80; i++) {
       flakes.push({
         id: i,
         left: Math.random() * 100,
-        animationDuration: 5 + Math.random() * 10,
-        animationDelay: Math.random() * 5,
-        size: 2 + Math.random() * 4,
-        opacity: 0.3 + Math.random() * 0.7,
+        animationDuration: 8 + Math.random() * 12,
+        animationDelay: Math.random() * 8,
+        size: 2 + Math.random() * 6,
+        opacity: 0.4 + Math.random() * 0.6,
       });
     }
     setSnowflakes(flakes);
@@ -40,6 +40,7 @@ const Snowfall = () => {
             opacity: flake.opacity,
             animation: `snow ${flake.animationDuration}s linear infinite`,
             animationDelay: `${flake.animationDelay}s`,
+            boxShadow: '0 0 6px rgba(255, 255, 255, 0.8)',
           }}
         />
       ))}
