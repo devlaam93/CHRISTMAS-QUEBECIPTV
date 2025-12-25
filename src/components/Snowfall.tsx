@@ -1,46 +1,44 @@
 import { useEffect, useState } from 'react';
 
-interface Snowflake {
+interface Ember {
   id: number;
   left: number;
   animationDuration: number;
   animationDelay: number;
   size: number;
-  opacity: number;
 }
 
 const Snowfall = () => {
-  const [snowflakes, setSnowflakes] = useState<Snowflake[]>([]);
+  const [embers, setEmbers] = useState<Ember[]>([]);
 
   useEffect(() => {
-    const flakes: Snowflake[] = [];
-    for (let i = 0; i < 40; i++) {
-      flakes.push({
+    const particles: Ember[] = [];
+    for (let i = 0; i < 30; i++) {
+      particles.push({
         id: i,
         left: Math.random() * 100,
-        animationDuration: 12 + Math.random() * 10,
-        animationDelay: Math.random() * 8,
-        size: 4 + Math.random() * 8,
-        opacity: 0.15 + Math.random() * 0.25,
+        animationDuration: 6 + Math.random() * 8,
+        animationDelay: Math.random() * 6,
+        size: 2 + Math.random() * 4,
       });
     }
-    setSnowflakes(flakes);
+    setEmbers(particles);
   }, []);
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-      {snowflakes.map((flake) => (
+      {embers.map((ember) => (
         <div
-          key={flake.id}
+          key={ember.id}
           className="absolute rounded-full"
           style={{
-            left: `${flake.left}%`,
-            width: `${flake.size}px`,
-            height: `${flake.size}px`,
-            opacity: flake.opacity,
-            animation: `snow ${flake.animationDuration}s linear infinite`,
-            animationDelay: `${flake.animationDelay}s`,
-            background: `radial-gradient(circle, hsl(var(--xmas-gold) / 0.6) 0%, transparent 70%)`,
+            left: `${ember.left}%`,
+            bottom: 0,
+            width: `${ember.size}px`,
+            height: `${ember.size}px`,
+            background: `radial-gradient(circle, hsl(var(--fire-orange)) 0%, hsl(var(--fire-amber) / 0.5) 50%, transparent 70%)`,
+            animation: `ember ${ember.animationDuration}s ease-out infinite`,
+            animationDelay: `${ember.animationDelay}s`,
           }}
         />
       ))}

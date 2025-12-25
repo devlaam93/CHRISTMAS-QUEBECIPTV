@@ -18,18 +18,13 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="relative bg-foreground text-white overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-xmas-red rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-xmas-green rounded-full blur-[150px]" />
-      </div>
-
-      <div className="relative container mx-auto px-4 py-16">
+    <footer id="contact" className="relative bg-card border-t border-border/50">
+      <div className="container mx-auto px-4 py-16">
         <ScrollReveal animation="fade-up" delay={0} duration={500}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
             {highlights.map((item, index) => (
-              <div key={index} className="flex items-center justify-center gap-3 py-4 px-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 group">
-                <item.icon className="w-5 h-5 text-xmas-gold group-hover:scale-110 transition-transform" />
+              <div key={index} className="flex items-center justify-center gap-3 py-4 px-5 rounded-xl bg-muted/30 border border-border/30 hover:border-fire-orange/30 transition-all duration-300 group">
+                <item.icon className="w-5 h-5 text-fire-orange group-hover:scale-110 transition-transform" />
                 <span className="text-sm font-medium font-body">{item.label}</span>
               </div>
             ))}
@@ -39,13 +34,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
           <ScrollReveal animation="fade-up" delay={100} duration={500}>
             <div className="space-y-6">
-              <img src={logo} alt="Quebec IPTV" className="h-12 w-auto brightness-0 invert" />
-              <p className="text-white/60 leading-relaxed max-w-md font-body text-sm">
-                🎄 Vivez un divertissement premium avec le service IPTV le plus fiable au Canada. 
+              <img src={logo} alt="Quebec IPTV" className="h-12 w-auto" />
+              <p className="text-muted-foreground leading-relaxed max-w-md font-body text-sm">
+                🔥 Vivez un divertissement premium avec le service IPTV le plus fiable au Canada. 
                 Streaming 4K cristallin, des milliers de chaînes, et un support de classe mondiale.
               </p>
               <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer">
-                <Button className="gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white border-0 font-body rounded-full">
+                <Button className="gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white border-0 font-body rounded-lg">
                   <WhatsAppIcon className="w-5 h-5" />
                   Nous Contacter
                 </Button>
@@ -55,43 +50,43 @@ const Footer = () => {
 
           <ScrollReveal animation="fade-up" delay={200} duration={500}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer" className="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="w-11 h-11 rounded-xl bg-xmas-green/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <WhatsAppIcon className="w-5 h-5 text-xmas-green" />
+              <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer" className="group p-5 rounded-xl bg-muted/30 border border-border/30 hover:border-fire-orange/30 transition-all duration-300">
+                <div className="w-11 h-11 rounded-xl bg-fire-orange/10 flex items-center justify-center mb-4 group-hover:bg-gradient-fire transition-all">
+                  <WhatsAppIcon className="w-5 h-5 text-fire-orange group-hover:text-background transition-colors" />
                 </div>
                 <h4 className="font-semibold mb-1 text-sm">WhatsApp</h4>
-                <p className="text-xs text-white/60 font-body">+1 450 804 0166</p>
+                <p className="text-xs text-muted-foreground font-body">+1 450 804 0166</p>
               </a>
 
-              <a href="mailto:contact@quebeciptv.ca" className="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="w-11 h-11 rounded-xl bg-xmas-red/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Mail className="w-5 h-5 text-xmas-red-light" />
+              <a href="mailto:contact@quebeciptv.ca" className="group p-5 rounded-xl bg-muted/30 border border-border/30 hover:border-fire-orange/30 transition-all duration-300">
+                <div className="w-11 h-11 rounded-xl bg-fire-orange/10 flex items-center justify-center mb-4 group-hover:bg-gradient-fire transition-all">
+                  <Mail className="w-5 h-5 text-fire-orange group-hover:text-background transition-colors" />
                 </div>
                 <h4 className="font-semibold mb-1 text-sm">Courriel</h4>
-                <p className="text-xs text-white/60 font-body break-all">contact@quebeciptv.ca</p>
+                <p className="text-xs text-muted-foreground font-body break-all">contact@quebeciptv.ca</p>
               </a>
 
-              <div className="group p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="w-11 h-11 rounded-xl bg-xmas-gold/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <MapPin className="w-5 h-5 text-xmas-gold" />
+              <div className="group p-5 rounded-xl bg-muted/30 border border-border/30 hover:border-fire-orange/30 transition-all duration-300">
+                <div className="w-11 h-11 rounded-xl bg-fire-amber/10 flex items-center justify-center mb-4 group-hover:bg-gradient-amber transition-all">
+                  <MapPin className="w-5 h-5 text-fire-amber group-hover:text-background transition-colors" />
                 </div>
                 <h4 className="font-semibold mb-1 text-sm">Emplacement</h4>
-                <p className="text-xs text-white/60 font-body">Québec, Canada 🇨🇦</p>
+                <p className="text-xs text-muted-foreground font-body">Québec, Canada 🇨🇦</p>
               </div>
             </div>
           </ScrollReveal>
         </div>
 
         <ScrollReveal animation="fade" delay={300} duration={500}>
-          <div className="pt-8 border-t border-white/10">
+          <div className="pt-8 border-t border-border/30">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <p className="text-sm text-white/50 font-body">
+              <p className="text-sm text-muted-foreground font-body">
                 © {new Date().getFullYear()} Quebec IPTV. Tous droits réservés.
               </p>
               <div className="flex items-center gap-6">
-                <a href="#" className="text-sm text-white/50 hover:text-xmas-gold transition-colors font-body">Confidentialité</a>
-                <a href="#" className="text-sm text-white/50 hover:text-xmas-gold transition-colors font-body">Conditions</a>
-                <a href="#" className="text-sm text-white/50 hover:text-xmas-gold transition-colors font-body">Remboursement</a>
+                <a href="#" className="text-sm text-muted-foreground hover:text-fire-orange transition-colors font-body">Confidentialité</a>
+                <a href="#" className="text-sm text-muted-foreground hover:text-fire-orange transition-colors font-body">Conditions</a>
+                <a href="#" className="text-sm text-muted-foreground hover:text-fire-orange transition-colors font-body">Remboursement</a>
               </div>
             </div>
           </div>

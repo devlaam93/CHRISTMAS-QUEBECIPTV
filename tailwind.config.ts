@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Space Grotesk', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['Outfit', 'sans-serif'],
+        body: ['DM Sans', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,17 +51,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        xmas: {
-          red: "hsl(var(--xmas-red))",
-          "red-light": "hsl(var(--xmas-red-light))",
-          green: "hsl(var(--xmas-green))",
-          "green-light": "hsl(var(--xmas-green-light))",
-          gold: "hsl(var(--xmas-gold))",
-          "gold-light": "hsl(var(--xmas-gold-light))",
-          pink: "hsl(var(--xmas-pink))",
-          purple: "hsl(var(--xmas-purple))",
-          orange: "hsl(var(--xmas-orange))",
-          teal: "hsl(var(--xmas-teal))",
+        fire: {
+          orange: "hsl(var(--fire-orange))",
+          "orange-light": "hsl(var(--fire-orange-light))",
+          "orange-dark": "hsl(var(--fire-orange-dark))",
+          amber: "hsl(var(--fire-amber))",
+          yellow: "hsl(var(--fire-yellow))",
+          red: "hsl(var(--fire-red))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -96,17 +92,12 @@ export default {
           "0%": { transform: "translateY(20px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
-        "fade-in": {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "scale-in": "scale-in 0.5s ease-out forwards",
         "slide-up": "slide-up 0.5s ease-out forwards",
-        "fade-in": "fade-in 0.5s ease-out forwards",
       },
     },
   },

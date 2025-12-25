@@ -31,10 +31,10 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
   }, [targetDate]);
 
   const timeUnits = [
-    { value: timeLeft.days, label: 'Jours' },
-    { value: timeLeft.hours, label: 'Heures' },
-    { value: timeLeft.minutes, label: 'Min' },
-    { value: timeLeft.seconds, label: 'Sec' },
+    { value: timeLeft.days, label: 'JOURS' },
+    { value: timeLeft.hours, label: 'HEURES' },
+    { value: timeLeft.minutes, label: 'MIN' },
+    { value: timeLeft.seconds, label: 'SEC' },
   ];
 
   return (
@@ -42,14 +42,14 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
       {timeUnits.map((unit, index) => (
         <div key={unit.label} className="flex flex-col items-center">
           <div 
-            className="glass-card w-16 h-20 md:w-20 md:h-24 flex flex-col items-center justify-center animate-pulse-soft"
-            style={{ animationDelay: `${index * 0.2}s` }}
+            className="card-dark w-16 h-20 md:w-20 md:h-24 flex flex-col items-center justify-center animate-pulse-glow"
+            style={{ animationDelay: `${index * 0.3}s` }}
           >
-            <span className="text-2xl md:text-4xl font-display font-bold text-gradient-xmas">
+            <span className="text-2xl md:text-4xl font-display font-bold text-gradient-fire">
               {String(unit.value).padStart(2, '0')}
             </span>
           </div>
-          <span className="text-xs text-muted-foreground mt-2 font-medium uppercase tracking-wider font-body">
+          <span className="text-[10px] text-muted-foreground mt-2 font-medium tracking-widest font-body">
             {unit.label}
           </span>
         </div>
