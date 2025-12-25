@@ -38,27 +38,35 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
   }, [targetDate]);
 
   const timeUnits = [
-    { value: timeLeft.days, label: 'Days' },
-    { value: timeLeft.hours, label: 'Hours' },
+    { value: timeLeft.days, label: 'Jours' },
+    { value: timeLeft.hours, label: 'Heures' },
     { value: timeLeft.minutes, label: 'Minutes' },
-    { value: timeLeft.seconds, label: 'Seconds' },
+    { value: timeLeft.seconds, label: 'Secondes' },
   ];
 
   return (
     <div className="flex gap-3 md:gap-6 justify-center">
-      {timeUnits.map((unit) => (
+      {timeUnits.map((unit, index) => (
         <div key={unit.label} className="flex flex-col items-center">
-          <div className="relative">
-            <div className="glass-strong w-16 h-16 md:w-24 md:h-24 rounded-xl flex items-center justify-center border border-christmas-gold/40 animate-glow-pulse">
+          <div className="relative group">
+            {/* Ornament hook */}
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-0.5 h-3 bg-christmas-gold" />
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-2 border-christmas-gold" />
+            
+            {/* Main timer box */}
+            <div 
+              className="christmas-border w-16 h-16 md:w-24 md:h-24 rounded-2xl flex items-center justify-center bg-card/80 backdrop-blur-sm animate-glow-pulse"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
               <span className="text-2xl md:text-4xl font-display font-bold text-christmas-gold">
                 {String(unit.value).padStart(2, '0')}
               </span>
             </div>
-            {/* Decorative ornament effect */}
-            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-christmas-red" />
-            <div className="absolute -inset-0.5 bg-gradient-to-br from-christmas-red/20 to-christmas-green/20 rounded-xl -z-10 blur-sm" />
+            
+            {/* Decorative ornament cap */}
+            <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-6 h-3 bg-gradient-to-b from-christmas-gold to-christmas-gold-light rounded-t-full" />
           </div>
-          <span className="text-xs md:text-sm text-muted-foreground mt-3 font-medium uppercase tracking-wider">
+          <span className="text-xs md:text-sm text-muted-foreground mt-4 font-medium uppercase tracking-wider">
             {unit.label}
           </span>
         </div>

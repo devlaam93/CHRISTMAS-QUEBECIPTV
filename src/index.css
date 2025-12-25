@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,59 +6,69 @@
 
 @layer base {
   :root {
-    --background: 210 30% 8%;
+    --background: 150 30% 4%;
     --foreground: 40 30% 96%;
 
-    --card: 210 25% 12%;
+    --card: 150 25% 8%;
     --card-foreground: 40 30% 96%;
 
-    --popover: 210 25% 12%;
+    --popover: 150 25% 8%;
     --popover-foreground: 40 30% 96%;
 
-    --primary: 24 95% 53%;
+    --primary: 0 75% 50%;
     --primary-foreground: 40 30% 96%;
 
-    --secondary: 24 80% 45%;
+    --secondary: 145 70% 35%;
     --secondary-foreground: 40 30% 96%;
 
-    --muted: 210 20% 18%;
-    --muted-foreground: 210 15% 60%;
+    --muted: 150 20% 14%;
+    --muted-foreground: 150 15% 55%;
 
-    --accent: 24 100% 60%;
-    --accent-foreground: 210 30% 8%;
+    --accent: 45 100% 55%;
+    --accent-foreground: 150 30% 4%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 20% 22%;
-    --input: 210 20% 22%;
-    --ring: 24 95% 53%;
+    --border: 150 20% 18%;
+    --input: 150 20% 18%;
+    --ring: 0 75% 50%;
 
     --radius: 1rem;
 
-    /* Quebec IPTV Design Tokens - Orange Theme */
-    --quebec-orange: 24 95% 53%;
-    --quebec-orange-dark: 24 100% 40%;
-    --quebec-orange-light: 24 100% 65%;
-    --quebec-gold: 42 90% 55%;
-    --quebec-gold-light: 45 95% 65%;
-    --quebec-cream: 40 30% 96%;
-    --quebec-snow: 210 30% 95%;
+    /* Christmas Quebec IPTV Design Tokens */
+    --christmas-red: 0 75% 50%;
+    --christmas-red-dark: 0 80% 35%;
+    --christmas-red-light: 0 70% 60%;
+    --christmas-green: 145 70% 35%;
+    --christmas-green-dark: 145 75% 25%;
+    --christmas-green-light: 145 65% 45%;
+    --christmas-gold: 45 100% 55%;
+    --christmas-gold-light: 48 100% 65%;
+    --christmas-snow: 200 30% 98%;
+    --christmas-cream: 40 40% 95%;
+    --christmas-holly: 120 50% 25%;
+    
+    /* Quebec Colors */
+    --quebec-blue: 210 80% 45%;
+    --quebec-white: 0 0% 100%;
     
     /* Gradients */
-    --gradient-quebec: linear-gradient(135deg, hsl(var(--quebec-orange)) 0%, hsl(var(--quebec-orange-dark)) 100%);
-    --gradient-festive: linear-gradient(135deg, hsl(var(--quebec-orange)) 0%, hsl(var(--quebec-orange-light)) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(var(--quebec-gold)) 0%, hsl(var(--quebec-gold-light)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(210 25% 14%) 0%, hsl(210 25% 10%) 100%);
-    --gradient-hero: radial-gradient(ellipse at 50% 0%, hsl(var(--quebec-orange) / 0.15) 0%, transparent 60%);
+    --gradient-christmas: linear-gradient(135deg, hsl(var(--christmas-red)) 0%, hsl(var(--christmas-red-dark)) 100%);
+    --gradient-festive: linear-gradient(135deg, hsl(var(--christmas-green)) 0%, hsl(var(--christmas-red)) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--christmas-gold)) 0%, hsl(var(--christmas-gold-light)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(150 25% 10%) 0%, hsl(150 25% 6%) 100%);
+    --gradient-hero: radial-gradient(ellipse at 50% 0%, hsl(var(--christmas-red) / 0.2) 0%, hsl(var(--christmas-green) / 0.1) 40%, transparent 70%);
+    --gradient-snow: linear-gradient(180deg, transparent 0%, hsl(var(--christmas-snow) / 0.05) 100%);
     
     /* Glows */
-    --glow-orange: 0 0 40px hsl(var(--quebec-orange) / 0.4), 0 0 80px hsl(var(--quebec-orange) / 0.2);
-    --glow-gold: 0 0 40px hsl(var(--quebec-gold) / 0.5), 0 0 80px hsl(var(--quebec-gold) / 0.3);
+    --glow-red: 0 0 40px hsl(var(--christmas-red) / 0.5), 0 0 80px hsl(var(--christmas-red) / 0.3);
+    --glow-green: 0 0 40px hsl(var(--christmas-green) / 0.5), 0 0 80px hsl(var(--christmas-green) / 0.3);
+    --glow-gold: 0 0 40px hsl(var(--christmas-gold) / 0.6), 0 0 80px hsl(var(--christmas-gold) / 0.4);
     
     /* Shadows */
-    --shadow-card: 0 25px 50px -12px hsl(0 0% 0% / 0.5), 0 0 0 1px hsl(var(--border));
-    --shadow-glow: 0 0 60px hsl(var(--quebec-orange) / 0.3);
+    --shadow-card: 0 25px 50px -12px hsl(0 0% 0% / 0.6), 0 0 0 1px hsl(var(--border));
+    --shadow-glow: 0 0 60px hsl(var(--christmas-red) / 0.4);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -82,20 +92,20 @@
 
   html, body {
     @apply bg-background text-foreground antialiased overflow-x-hidden;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cinzel Decorative', cursive;
   }
 }
 
 @layer utilities {
-  .text-gradient-quebec {
+  .text-gradient-christmas {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-quebec);
+    background-image: var(--gradient-christmas);
   }
 
   .text-gradient-gold {
@@ -108,8 +118,8 @@
     background-image: var(--gradient-festive);
   }
 
-  .bg-gradient-quebec {
-    background-image: var(--gradient-quebec);
+  .bg-gradient-christmas {
+    background-image: var(--gradient-christmas);
   }
 
   .bg-gradient-festive {
@@ -128,8 +138,16 @@
     background-image: var(--gradient-hero);
   }
 
-  .glow-orange {
-    box-shadow: var(--glow-orange);
+  .bg-gradient-snow {
+    background-image: var(--gradient-snow);
+  }
+
+  .glow-red {
+    box-shadow: var(--glow-red);
+  }
+
+  .glow-green {
+    box-shadow: var(--glow-green);
   }
 
   .glow-gold {
@@ -176,6 +194,21 @@
   .animate-twinkle {
     animation: twinkle 2s ease-in-out infinite;
   }
+
+  .animate-swing {
+    animation: swing 3s ease-in-out infinite;
+    transform-origin: top center;
+  }
+
+  .animate-sparkle {
+    animation: sparkle 1.5s ease-in-out infinite;
+  }
+
+  .christmas-border {
+    border: 2px solid transparent;
+    background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                linear-gradient(135deg, hsl(var(--christmas-red)), hsl(var(--christmas-green)), hsl(var(--christmas-gold))) border-box;
+  }
 }
 
 @keyframes float {
@@ -194,7 +227,7 @@
   }
   50% {
     opacity: 0.8;
-    filter: brightness(1.2);
+    filter: brightness(1.3);
   }
 }
 
@@ -224,8 +257,28 @@
     transform: scale(1);
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.4;
     transform: scale(0.8);
+  }
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2) rotate(180deg);
   }
 }
 
@@ -239,10 +292,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted));
+  background: hsl(var(--christmas-red) / 0.5);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary) / 0.5);
+  background: hsl(var(--christmas-red) / 0.7);
 }
