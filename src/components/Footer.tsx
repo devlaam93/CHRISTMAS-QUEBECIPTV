@@ -1,7 +1,7 @@
 import { Mail, MapPin, Tv, Shield, Headphones, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "./ScrollReveal";
-import logo from "@/assets/modeiptv-logo.svg";
+import logo from "@/assets/quebec-iptv-logo.png";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" className={className} fill="currentColor">
@@ -11,21 +11,21 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 
 const Footer = () => {
   const highlights = [
-    { icon: Tv, label: "30,000+ Channels" },
-    { icon: Shield, label: "99.9% Uptime" },
-    { icon: Headphones, label: "24/7 Support" },
-    { icon: Clock, label: "Instant Activation" },
+    { icon: Tv, label: "30 000+ Chaînes" },
+    { icon: Shield, label: "99.9% Disponibilité" },
+    { icon: Headphones, label: "Support 24/7" },
+    { icon: Clock, label: "Activation Instantanée" },
   ];
 
   return (
     <footer id="contact" className="relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-christmas-red/5" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-quebec-orange/5" />
       
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-christmas-gold/50 to-transparent" />
-      <div className="absolute -top-32 -right-32 w-64 h-64 bg-christmas-gold/5 rounded-full blur-3xl" />
-      <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-christmas-red/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-quebec-orange/50 to-transparent" />
+      <div className="absolute -top-32 -right-32 w-64 h-64 bg-quebec-gold/5 rounded-full blur-3xl" />
+      <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-quebec-orange/5 rounded-full blur-3xl" />
 
       <div className="relative container mx-auto px-4 py-16">
         {/* Highlights Bar */}
@@ -34,9 +34,9 @@ const Footer = () => {
             {highlights.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-christmas-gold/30 transition-all duration-300 group"
+                className="flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-quebec-orange/30 transition-all duration-300 group"
               >
-                <item.icon className="w-5 h-5 text-christmas-gold group-hover:scale-110 transition-transform" />
+                <item.icon className="w-5 h-5 text-quebec-orange group-hover:scale-110 transition-transform" />
                 <span className="text-sm font-medium text-foreground">{item.label}</span>
               </div>
             ))}
@@ -48,20 +48,20 @@ const Footer = () => {
           {/* Brand Section */}
           <ScrollReveal animation="fade-up" delay={100} duration={500}>
             <div className="space-y-6">
-              <img src={logo} alt="MODEIPTV Logo" className="h-14 w-auto" />
+              <img src={logo} alt="Quebec IPTV Logo" className="h-14 w-auto" />
               <p className="text-muted-foreground leading-relaxed max-w-md">
-                Experience premium entertainment with Canada's most trusted IPTV service. 
-                Crystal-clear 4K streaming, thousands of channels, and world-class support.
+                Vivez un divertissement premium avec le service IPTV le plus fiable au Canada. 
+                Streaming 4K cristallin, des milliers de chaînes, et un support de classe mondiale.
               </p>
               <div className="flex items-center gap-4">
                 <a 
-                  href="https://api.whatsapp.com/send/?phone=15594826660" 
+                  href="https://api.whatsapp.com/send/?phone=14508040166" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
                   <Button className="gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white border-0 shadow-lg shadow-[#25D366]/20">
                     <WhatsAppIcon className="w-5 h-5" />
-                    Message Us
+                    Nous Contacter
                   </Button>
                 </a>
               </div>
@@ -72,35 +72,35 @@ const Footer = () => {
           <ScrollReveal animation="fade-up" delay={200} duration={500}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <a 
-                href="https://api.whatsapp.com/send/?phone=15594826660" 
+                href="https://api.whatsapp.com/send/?phone=14508040166" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group p-4 sm:p-5 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-christmas-gold/50 hover:bg-card/80 transition-all duration-300"
+                className="group p-4 sm:p-5 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-quebec-orange/50 hover:bg-card/80 transition-all duration-300"
               >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-christmas-gold/20 to-christmas-gold/5 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
-                  <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6 text-christmas-gold" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-quebec-orange/20 to-quebec-orange/5 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                  <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6 text-quebec-orange" />
                 </div>
                 <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">WhatsApp</h4>
-                <p className="text-xs sm:text-sm text-muted-foreground">+1 559 482 6660</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">+1 450 804 0166</p>
               </a>
 
               <a 
-                href="mailto:support@modeiptv.ca"
-                className="group p-4 sm:p-5 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-christmas-gold/50 hover:bg-card/80 transition-all duration-300"
+                href="mailto:contact@quebeciptv.ca"
+                className="group p-4 sm:p-5 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-quebec-orange/50 hover:bg-card/80 transition-all duration-300"
               >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-christmas-gold/20 to-christmas-gold/5 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
-                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-christmas-gold" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-quebec-orange/20 to-quebec-orange/5 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-quebec-orange" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Email</h4>
-                <p className="text-xs sm:text-sm text-muted-foreground break-all">support@modeiptv.ca</p>
+                <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Courriel</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground break-all">contact@quebeciptv.ca</p>
               </a>
 
-              <div className="group p-4 sm:p-5 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-christmas-gold/50 hover:bg-card/80 transition-all duration-300">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-christmas-gold/20 to-christmas-gold/5 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
-                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-christmas-gold" />
+              <div className="group p-4 sm:p-5 rounded-2xl bg-card/50 border border-border/50 backdrop-blur-sm hover:border-quebec-orange/50 hover:bg-card/80 transition-all duration-300">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-quebec-orange/20 to-quebec-orange/5 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-quebec-orange" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Location</h4>
-                <p className="text-xs sm:text-sm text-muted-foreground">Toronto, Canada 🇨🇦</p>
+                <h4 className="font-semibold text-foreground mb-1 text-sm sm:text-base">Emplacement</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground">Québec, Canada 🇨🇦</p>
               </div>
             </div>
           </ScrollReveal>
@@ -111,17 +111,17 @@ const Footer = () => {
           <div className="pt-8 border-t border-border/30">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} MODEIPTV. All rights reserved.
+                © {new Date().getFullYear()} Quebec IPTV. Tous droits réservés.
               </p>
               <div className="flex items-center gap-8">
-                <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
-                  Privacy Policy
+                <a href="#" className="text-sm text-muted-foreground hover:text-quebec-orange transition-colors">
+                  Politique de Confidentialité
                 </a>
-                <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
-                  Terms of Service
+                <a href="#" className="text-sm text-muted-foreground hover:text-quebec-orange transition-colors">
+                  Conditions d'Utilisation
                 </a>
-                <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors">
-                  Refund Policy
+                <a href="#" className="text-sm text-muted-foreground hover:text-quebec-orange transition-colors">
+                  Politique de Remboursement
                 </a>
               </div>
             </div>

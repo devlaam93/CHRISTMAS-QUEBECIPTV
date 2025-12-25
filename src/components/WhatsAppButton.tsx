@@ -1,8 +1,6 @@
-import { Phone } from 'lucide-react';
-
 const WhatsAppButton = () => {
-  const whatsappNumber = "+15594826660";
-  const message = "Hello! I'm interested in MODE IPTV subscription.";
+  const whatsappNumber = "+14508040166";
+  const message = "Bonjour! Je suis intéressé par un abonnement Quebec IPTV.";
   
   const handleClick = () => {
     const url = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
@@ -13,7 +11,7 @@ const WhatsAppButton = () => {
     <button
       onClick={handleClick}
       className="fixed bottom-6 right-6 z-50 group"
-      aria-label="Contact us on WhatsApp"
+      aria-label="Contactez-nous sur WhatsApp"
     >
       {/* Pulse ring animation */}
       <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-30" />
