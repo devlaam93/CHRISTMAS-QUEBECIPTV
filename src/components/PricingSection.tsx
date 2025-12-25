@@ -1,4 +1,4 @@
-import { Check, Crown, Zap, Shield, Tv, Film, Headphones, Gift, Star } from 'lucide-react';
+import { Check, Crown, Zap, Shield, Tv, Film, Headphones, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ScrollReveal from './ScrollReveal';
 import paymentBadges from '@/assets/payment-badges.webp';
@@ -26,7 +26,7 @@ const PricingSection = () => {
       icon: Zap,
       title: 'Standard',
       subtitle: 'Serveur Performance',
-      color: 'christmas-green',
+      color: 'forest',
       options: [
         { duration: '12 Mois', price: '39.99', originalPrice: '119', discount: '80%', link: 'https://order.quebeciptv.ca/step/checkout-12-months-iptv-subscriptions-2/' },
         { duration: '24 Mois', price: '79.99', originalPrice: '199', discount: '80%', link: 'https://order.quebeciptv.ca/step/checkout-24-month-iptv-subscriptions-2/' },
@@ -37,7 +37,7 @@ const PricingSection = () => {
       icon: Crown,
       title: 'Premium',
       subtitle: 'Serveur Performance',
-      color: 'christmas-gold',
+      color: 'gold',
       popular: true,
       options: [
         { duration: '12 Mois', price: '59.99', originalPrice: '179', discount: '80%', link: 'https://order.quebeciptv.ca/step/checkout-12-months-iptv-premium-subscriptions-2/', popular: true },
@@ -47,80 +47,70 @@ const PricingSection = () => {
   ];
 
   return (
-    <section id="pricing" className="py-20 relative overflow-hidden">
-      {/* Christmas decorations */}
-      <div className="absolute top-10 left-10 text-4xl animate-swing">🎄</div>
-      <div className="absolute top-20 right-10 text-3xl animate-float">⭐</div>
-      <div className="absolute bottom-20 left-20 text-3xl animate-swing" style={{ animationDelay: '-2s' }}>🎁</div>
+    <section id="pricing" className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-luxury-burgundy/5 to-transparent" />
       
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 relative">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-christmas-red/20 border border-christmas-red/40 rounded-full px-4 py-2 mb-6">
-              <Gift className="w-4 h-4 text-christmas-gold" />
-              <span className="text-sm font-medium text-christmas-gold font-body">OFFRE DE NOËL - CANADA SEULEMENT</span>
-              <Gift className="w-4 h-4 text-christmas-gold" />
+            <div className="inline-flex items-center gap-3 mb-6">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent to-luxury-gold/50" />
+              <span className="text-xs font-medium text-luxury-gold tracking-[0.3em] uppercase font-body">
+                Forfaits Exclusifs
+              </span>
+              <div className="h-px w-12 bg-gradient-to-l from-transparent to-luxury-gold/50" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
-              🎄 Forfaits <span className="text-christmas-red">Festifs</span> 🎄
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground mb-4">
+              Choisissez Votre <span className="text-luxury-gold">Expérience</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-body">
-              Célébrez Noël avec nos meilleures offres de l'année! 
-              <span className="text-christmas-gold font-semibold"> +1 Mois GRATUIT</span> sur tous les forfaits!
+            <p className="text-muted-foreground max-w-xl mx-auto font-body">
+              Deux niveaux d'excellence pour votre divertissement premium
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Feature Comparison Table */}
+        {/* Comparison Table */}
         <ScrollReveal delay={0.2}>
-          <div className="christmas-border rounded-3xl overflow-hidden mb-16 bg-card/50 backdrop-blur-sm">
+          <div className="luxury-border rounded-xl overflow-hidden mb-16 bg-card/40 backdrop-blur-sm">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="bg-gradient-to-r from-christmas-red/20 via-christmas-green/20 to-christmas-red/20">
-                    <th className="text-left p-4 text-foreground font-display">Fonctionnalités</th>
-                    <th className="text-center p-4">
+                  <tr className="border-b border-luxury-gold/10">
+                    <th className="text-left p-5 text-foreground font-display text-lg">Fonctionnalités</th>
+                    <th className="text-center p-5 w-40">
                       <div className="flex flex-col items-center">
-                        <Zap className="w-6 h-6 text-christmas-green mb-1" />
-                        <span className="text-christmas-green font-display">Standard</span>
+                        <Zap className="w-6 h-6 text-luxury-forest mb-2" />
+                        <span className="text-luxury-forest font-display text-lg">Standard</span>
                       </div>
                     </th>
-                    <th className="text-center p-4">
+                    <th className="text-center p-5 w-40 bg-luxury-gold/5">
                       <div className="flex flex-col items-center">
-                        <Crown className="w-6 h-6 text-christmas-gold mb-1" />
-                        <span className="text-christmas-gold font-display">Premium</span>
-                        <span className="text-xs text-christmas-red mt-1 font-body">🔥 Populaire</span>
+                        <Crown className="w-6 h-6 text-luxury-gold mb-2" />
+                        <span className="text-luxury-gold font-display text-lg">Premium</span>
+                        <span className="text-[10px] text-luxury-burgundy-light mt-1 font-body tracking-wider">POPULAIRE</span>
                       </div>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {features.map((feature, index) => (
-                    <tr key={feature.name} className={`border-t border-border/30 ${index % 2 === 0 ? 'bg-card/30' : ''}`}>
-                      <td className="p-4 text-muted-foreground flex items-center gap-2 font-body">
-                        {feature.icon && <feature.icon className="w-4 h-4 text-christmas-gold" />}
+                    <tr key={feature.name} className="border-b border-border/30 hover:bg-card/30 transition-colors">
+                      <td className="p-4 text-muted-foreground flex items-center gap-2 font-body text-sm">
+                        {feature.icon && <feature.icon className="w-4 h-4 text-luxury-gold/60" />}
                         {feature.name}
                       </td>
                       <td className="text-center p-4">
                         {typeof feature.standard === 'boolean' ? (
-                          feature.standard ? (
-                            <Check className="w-5 h-5 text-christmas-green mx-auto" />
-                          ) : (
-                            <span className="text-muted-foreground/50">—</span>
-                          )
+                          feature.standard ? <Check className="w-5 h-5 text-luxury-forest mx-auto" /> : <span className="text-muted-foreground/30">—</span>
                         ) : (
-                          <span className="text-christmas-green font-semibold font-body">{feature.standard}</span>
+                          <span className="text-luxury-forest font-semibold font-body text-sm">{feature.standard}</span>
                         )}
                       </td>
-                      <td className="text-center p-4">
+                      <td className="text-center p-4 bg-luxury-gold/5">
                         {typeof feature.premium === 'boolean' ? (
-                          feature.premium ? (
-                            <Check className="w-5 h-5 text-christmas-gold mx-auto" />
-                          ) : (
-                            <span className="text-muted-foreground/50">—</span>
-                          )
+                          feature.premium ? <Check className="w-5 h-5 text-luxury-gold mx-auto" /> : <span className="text-muted-foreground/30">—</span>
                         ) : (
-                          <span className="text-christmas-gold font-semibold font-body">{feature.premium}</span>
+                          <span className="text-luxury-gold font-semibold font-body text-sm">{feature.premium}</span>
                         )}
                       </td>
                     </tr>
@@ -132,42 +122,42 @@ const PricingSection = () => {
         </ScrollReveal>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {plans.map((plan, planIndex) => (
             <ScrollReveal key={plan.type} delay={0.1 * planIndex}>
-              <div className={`relative christmas-border rounded-3xl p-8 bg-card/50 backdrop-blur-sm ${plan.popular ? 'ring-2 ring-christmas-gold' : ''}`}>
+              <div className={`relative luxury-border rounded-xl p-8 bg-card/40 backdrop-blur-sm ${plan.popular ? 'ring-1 ring-luxury-gold/50' : ''}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-christmas-red text-foreground px-4 py-1 rounded-full text-sm font-semibold font-body flex items-center gap-1">
-                    <Star className="w-4 h-4" /> Plus Populaire 🎁
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-luxury-burgundy text-luxury-champagne px-4 py-1 rounded-full text-xs font-semibold font-body tracking-wider">
+                    RECOMMANDÉ
                   </div>
                 )}
                 
-                {/* Christmas decoration */}
-                <div className="absolute -top-6 -right-6 text-4xl animate-swing">🎄</div>
-                
                 <div className="text-center mb-8">
-                  <plan.icon className={`w-12 h-12 mx-auto mb-4 text-${plan.color}`} />
-                  <h3 className={`text-2xl font-display font-bold text-${plan.color}`}>{plan.title}</h3>
-                  <p className="text-muted-foreground text-sm font-body">{plan.subtitle}</p>
+                  <plan.icon className={`w-10 h-10 mx-auto mb-4 ${plan.color === 'gold' ? 'text-luxury-gold' : 'text-luxury-forest'}`} />
+                  <h3 className={`text-2xl font-display font-semibold ${plan.color === 'gold' ? 'text-luxury-gold' : 'text-luxury-forest'}`}>
+                    {plan.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm font-body mt-1">{plan.subtitle}</p>
                 </div>
 
                 <div className="space-y-4">
                   {plan.options.map((option) => (
-                    <div key={option.duration} className={`p-4 rounded-xl border ${option.popular ? 'border-christmas-gold bg-christmas-gold/10' : 'border-border/50 bg-card/30'}`}>
+                    <div key={option.duration} className={`p-5 rounded-lg border transition-all ${option.popular ? 'border-luxury-gold/40 bg-luxury-gold/5' : 'border-border/30 bg-card/30'}`}>
                       <div className="flex justify-between items-center mb-3">
                         <span className="font-semibold text-foreground font-body">{option.duration}</span>
-                        <span className="bg-christmas-red text-foreground text-xs px-2 py-1 rounded-full font-body">
-                          -{option.discount} 🎅
+                        <span className="bg-luxury-burgundy/80 text-luxury-champagne text-xs px-2 py-1 rounded font-body">
+                          -{option.discount}
                         </span>
                       </div>
-                      <div className="flex items-end gap-2 mb-3">
+                      <div className="flex items-end gap-2 mb-4">
                         <span className="text-3xl font-display font-bold text-foreground">${option.price}</span>
-                        <span className="text-muted-foreground line-through text-sm font-body">${option.originalPrice}</span>
-                        <span className="text-christmas-green text-xs font-body">+1 MOIS GRATUIT</span>
+                        <span className="text-muted-foreground line-through text-sm font-body mb-1">${option.originalPrice}</span>
+                        <span className="text-luxury-forest text-xs font-body mb-1 ml-auto">+1 MOIS GRATUIT</span>
                       </div>
                       <a href={option.link} target="_blank" rel="noopener noreferrer">
-                        <Button className={`w-full rounded-full font-body ${option.popular ? 'bg-gradient-christmas glow-red' : 'bg-christmas-green/80 hover:bg-christmas-green'} text-foreground`}>
-                          🎁 Commander Maintenant
+                        <Button className={`w-full rounded-md font-body group ${option.popular ? 'bg-gradient-gold text-luxury-forest-dark hover:opacity-90' : 'bg-luxury-forest hover:bg-luxury-forest-light text-foreground'}`}>
+                          Commander
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                         </Button>
                       </a>
                     </div>
@@ -178,11 +168,11 @@ const PricingSection = () => {
           ))}
         </div>
 
-        {/* Payment Badges */}
+        {/* Payment */}
         <ScrollReveal delay={0.4}>
           <div className="mt-12 text-center">
             <p className="text-muted-foreground text-sm mb-4 font-body">Paiement 100% sécurisé</p>
-            <img src={paymentBadges} alt="Méthodes de paiement sécurisées" className="h-10 mx-auto opacity-70" />
+            <img src={paymentBadges} alt="Méthodes de paiement" className="h-8 mx-auto opacity-60" />
           </div>
         </ScrollReveal>
       </div>

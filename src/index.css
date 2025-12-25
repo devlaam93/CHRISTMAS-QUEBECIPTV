@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,69 +6,66 @@
 
 @layer base {
   :root {
-    --background: 150 30% 4%;
-    --foreground: 40 30% 96%;
+    --background: 160 40% 3%;
+    --foreground: 45 50% 95%;
 
-    --card: 150 25% 8%;
-    --card-foreground: 40 30% 96%;
+    --card: 160 35% 6%;
+    --card-foreground: 45 50% 95%;
 
-    --popover: 150 25% 8%;
-    --popover-foreground: 40 30% 96%;
+    --popover: 160 35% 6%;
+    --popover-foreground: 45 50% 95%;
 
-    --primary: 0 75% 50%;
-    --primary-foreground: 40 30% 96%;
+    --primary: 345 70% 40%;
+    --primary-foreground: 45 50% 95%;
 
-    --secondary: 145 70% 35%;
-    --secondary-foreground: 40 30% 96%;
+    --secondary: 150 45% 25%;
+    --secondary-foreground: 45 50% 95%;
 
-    --muted: 150 20% 14%;
-    --muted-foreground: 150 15% 55%;
+    --muted: 160 30% 12%;
+    --muted-foreground: 160 20% 50%;
 
-    --accent: 45 100% 55%;
-    --accent-foreground: 150 30% 4%;
+    --accent: 42 85% 55%;
+    --accent-foreground: 160 40% 3%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 150 20% 18%;
-    --input: 150 20% 18%;
-    --ring: 0 75% 50%;
+    --border: 160 25% 15%;
+    --input: 160 25% 15%;
+    --ring: 42 85% 55%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
 
-    /* Christmas Quebec IPTV Design Tokens */
-    --christmas-red: 0 75% 50%;
-    --christmas-red-dark: 0 80% 35%;
-    --christmas-red-light: 0 70% 60%;
-    --christmas-green: 145 70% 35%;
-    --christmas-green-dark: 145 75% 25%;
-    --christmas-green-light: 145 65% 45%;
-    --christmas-gold: 45 100% 55%;
-    --christmas-gold-light: 48 100% 65%;
-    --christmas-snow: 200 30% 98%;
-    --christmas-cream: 40 40% 95%;
-    --christmas-holly: 120 50% 25%;
-    
-    /* Quebec Colors */
-    --quebec-blue: 210 80% 45%;
-    --quebec-white: 0 0% 100%;
+    /* Luxury Christmas Design Tokens */
+    --burgundy: 345 70% 40%;
+    --burgundy-dark: 345 75% 30%;
+    --burgundy-light: 345 65% 55%;
+    --forest: 150 45% 25%;
+    --forest-dark: 150 50% 15%;
+    --forest-light: 150 40% 35%;
+    --gold: 42 85% 55%;
+    --gold-light: 45 90% 65%;
+    --gold-dark: 40 80% 45%;
+    --champagne: 45 50% 90%;
+    --ivory: 45 40% 96%;
+    --snow: 200 30% 98%;
     
     /* Gradients */
-    --gradient-christmas: linear-gradient(135deg, hsl(var(--christmas-red)) 0%, hsl(var(--christmas-red-dark)) 100%);
-    --gradient-festive: linear-gradient(135deg, hsl(var(--christmas-green)) 0%, hsl(var(--christmas-red)) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(var(--christmas-gold)) 0%, hsl(var(--christmas-gold-light)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(150 25% 10%) 0%, hsl(150 25% 6%) 100%);
-    --gradient-hero: radial-gradient(ellipse at 50% 0%, hsl(var(--christmas-red) / 0.2) 0%, hsl(var(--christmas-green) / 0.1) 40%, transparent 70%);
-    --gradient-snow: linear-gradient(180deg, transparent 0%, hsl(var(--christmas-snow) / 0.05) 100%);
+    --gradient-burgundy: linear-gradient(135deg, hsl(var(--burgundy)) 0%, hsl(var(--burgundy-dark)) 100%);
+    --gradient-forest: linear-gradient(135deg, hsl(var(--forest)) 0%, hsl(var(--forest-dark)) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
+    --gradient-luxury: linear-gradient(135deg, hsl(var(--burgundy-dark)) 0%, hsl(var(--forest-dark)) 50%, hsl(var(--burgundy-dark)) 100%);
+    --gradient-card: linear-gradient(160deg, hsl(160 35% 8%) 0%, hsl(160 40% 4%) 100%);
+    --gradient-hero: radial-gradient(ellipse at 30% 0%, hsl(var(--burgundy) / 0.2) 0%, transparent 50%), radial-gradient(ellipse at 70% 100%, hsl(var(--forest) / 0.15) 0%, transparent 50%);
     
     /* Glows */
-    --glow-red: 0 0 40px hsl(var(--christmas-red) / 0.5), 0 0 80px hsl(var(--christmas-red) / 0.3);
-    --glow-green: 0 0 40px hsl(var(--christmas-green) / 0.5), 0 0 80px hsl(var(--christmas-green) / 0.3);
-    --glow-gold: 0 0 40px hsl(var(--christmas-gold) / 0.6), 0 0 80px hsl(var(--christmas-gold) / 0.4);
+    --glow-burgundy: 0 0 50px hsl(var(--burgundy) / 0.4), 0 0 100px hsl(var(--burgundy) / 0.2);
+    --glow-forest: 0 0 50px hsl(var(--forest) / 0.4), 0 0 100px hsl(var(--forest) / 0.2);
+    --glow-gold: 0 0 40px hsl(var(--gold) / 0.5), 0 0 80px hsl(var(--gold) / 0.3);
     
     /* Shadows */
-    --shadow-card: 0 25px 50px -12px hsl(0 0% 0% / 0.6), 0 0 0 1px hsl(var(--border));
-    --shadow-glow: 0 0 60px hsl(var(--christmas-red) / 0.4);
+    --shadow-card: 0 30px 60px -20px hsl(0 0% 0% / 0.6), 0 0 0 1px hsl(var(--border) / 0.5);
+    --shadow-luxury: 0 25px 50px -12px hsl(var(--burgundy-dark) / 0.4);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -92,42 +89,47 @@
 
   html, body {
     @apply bg-background text-foreground antialiased overflow-x-hidden;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
   }
 }
 
 @layer utilities {
-  .text-gradient-christmas {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-christmas);
-  }
-
   .text-gradient-gold {
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-gold);
   }
 
-  .text-gradient-festive {
+  .text-gradient-burgundy {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-festive);
+    background-image: var(--gradient-burgundy);
   }
 
-  .bg-gradient-christmas {
-    background-image: var(--gradient-christmas);
+  .text-gradient-luxury {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, hsl(var(--gold)), hsl(var(--champagne)), hsl(var(--gold)));
   }
 
-  .bg-gradient-festive {
-    background-image: var(--gradient-festive);
+  .bg-gradient-burgundy {
+    background-image: var(--gradient-burgundy);
+  }
+
+  .bg-gradient-forest {
+    background-image: var(--gradient-forest);
   }
 
   .bg-gradient-gold {
     background-image: var(--gradient-gold);
+  }
+
+  .bg-gradient-luxury {
+    background-image: var(--gradient-luxury);
   }
 
   .bg-gradient-card {
@@ -138,16 +140,12 @@
     background-image: var(--gradient-hero);
   }
 
-  .bg-gradient-snow {
-    background-image: var(--gradient-snow);
+  .glow-burgundy {
+    box-shadow: var(--glow-burgundy);
   }
 
-  .glow-red {
-    box-shadow: var(--glow-red);
-  }
-
-  .glow-green {
-    box-shadow: var(--glow-green);
+  .glow-forest {
+    box-shadow: var(--glow-forest);
   }
 
   .glow-gold {
@@ -158,133 +156,83 @@
     box-shadow: var(--shadow-card);
   }
 
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
+  .shadow-luxury {
+    box-shadow: var(--shadow-luxury);
   }
 
   .glass {
     @apply backdrop-blur-xl;
-    background: hsl(var(--card) / 0.7);
-    border: 1px solid hsl(var(--border) / 0.5);
+    background: hsl(var(--card) / 0.6);
+    border: 1px solid hsl(var(--gold) / 0.1);
   }
 
   .glass-strong {
     @apply backdrop-blur-2xl;
     background: hsl(var(--card) / 0.85);
-    border: 1px solid hsl(var(--border));
+    border: 1px solid hsl(var(--gold) / 0.15);
+  }
+
+  .luxury-border {
+    border: 1px solid transparent;
+    background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                linear-gradient(135deg, hsl(var(--gold) / 0.4), hsl(var(--burgundy) / 0.3), hsl(var(--gold) / 0.4)) border-box;
+  }
+
+  .gold-shimmer {
+    background: linear-gradient(90deg, 
+      hsl(var(--gold) / 0) 0%, 
+      hsl(var(--gold) / 0.5) 50%, 
+      hsl(var(--gold) / 0) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
   }
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
 
-  .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
-  }
-
-  .animate-shimmer {
-    animation: shimmer 2s linear infinite;
-    background-size: 200% 100%;
-  }
-
-  .animate-snow {
-    animation: snow 10s linear infinite;
-  }
-
-  .animate-twinkle {
-    animation: twinkle 2s ease-in-out infinite;
-  }
-
-  .animate-swing {
-    animation: swing 3s ease-in-out infinite;
-    transform-origin: top center;
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite;
   }
 
   .animate-sparkle {
-    animation: sparkle 1.5s ease-in-out infinite;
+    animation: sparkle 2s ease-in-out infinite;
   }
 
-  .christmas-border {
-    border: 2px solid transparent;
-    background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
-                linear-gradient(135deg, hsl(var(--christmas-red)), hsl(var(--christmas-green)), hsl(var(--christmas-gold))) border-box;
+  .animate-snow {
+    animation: snow 12s linear infinite;
   }
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
 }
 
-@keyframes pulse-glow {
-  0%, 100% {
-    opacity: 1;
-    filter: brightness(1);
-  }
-  50% {
-    opacity: 0.8;
-    filter: brightness(1.3);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-@keyframes snow {
-  0% {
-    transform: translateY(-10vh) translateX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh) translateX(20px);
-    opacity: 0.3;
-  }
-}
-
-@keyframes twinkle {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.4;
-    transform: scale(0.8);
-  }
-}
-
-@keyframes swing {
-  0%, 100% {
-    transform: rotate(-5deg);
-  }
-  50% {
-    transform: rotate(5deg);
-  }
+@keyframes glow {
+  0%, 100% { opacity: 0.6; filter: brightness(1); }
+  50% { opacity: 1; filter: brightness(1.3); }
 }
 
 @keyframes sparkle {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.2) rotate(180deg);
-  }
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
 }
 
-/* Scrollbar Styling */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes snow {
+  0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 0.8; }
+  100% { transform: translateY(100vh) translateX(30px) rotate(360deg); opacity: 0; }
+}
+
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -292,10 +240,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--christmas-red) / 0.5);
-  border-radius: 4px;
+  background: hsl(var(--gold) / 0.3);
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--christmas-red) / 0.7);
+  background: hsl(var(--gold) / 0.5);
 }

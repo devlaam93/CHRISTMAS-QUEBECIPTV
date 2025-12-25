@@ -1,4 +1,4 @@
-import { Mail, MapPin, Tv, Shield, Headphones, Clock, Gift } from "lucide-react";
+import { Mail, MapPin, Tv, Shield, Headphones, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "./ScrollReveal";
 import logo from "@/assets/quebec-iptv-logo.png";
@@ -19,17 +19,15 @@ const Footer = () => {
 
   return (
     <footer id="contact" className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-christmas-green/10" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-christmas-gold/50 to-transparent" />
-      <div className="absolute -top-32 -right-32 w-64 h-64 bg-christmas-red/10 rounded-full blur-3xl" />
-      <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-christmas-green/10 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-luxury-forest/10" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-luxury-gold/30 to-transparent" />
 
       <div className="relative container mx-auto px-4 py-16">
         <ScrollReveal animation="fade-up" delay={0} duration={500}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
             {highlights.map((item, index) => (
-              <div key={index} className="flex items-center justify-center gap-3 py-4 px-6 rounded-2xl christmas-border bg-card/30 backdrop-blur-sm hover:glow-gold transition-all duration-300 group">
-                <item.icon className="w-5 h-5 text-christmas-gold group-hover:scale-110 transition-transform" />
+              <div key={index} className="flex items-center justify-center gap-3 py-4 px-5 rounded-xl luxury-border bg-card/30 backdrop-blur-sm hover:bg-card/50 transition-all duration-300 group">
+                <item.icon className="w-5 h-5 text-luxury-gold group-hover:scale-110 transition-transform" />
                 <span className="text-sm font-medium text-foreground font-body">{item.label}</span>
               </div>
             ))}
@@ -39,13 +37,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
           <ScrollReveal animation="fade-up" delay={100} duration={500}>
             <div className="space-y-6">
-              <img src={logo} alt="Quebec IPTV Logo" className="h-14 w-auto" />
-              <p className="text-muted-foreground leading-relaxed max-w-md font-body">
-                🎄 Vivez un divertissement premium avec le service IPTV le plus fiable au Canada. 
+              <img src={logo} alt="Quebec IPTV" className="h-12 w-auto" />
+              <p className="text-muted-foreground leading-relaxed max-w-md font-body text-sm">
+                Vivez un divertissement premium avec le service IPTV le plus fiable au Canada. 
                 Streaming 4K cristallin, des milliers de chaînes, et un support de classe mondiale.
               </p>
               <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer">
-                <Button className="gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white border-0 shadow-lg">
+                <Button className="gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white border-0 font-body">
                   <WhatsAppIcon className="w-5 h-5" />
                   Nous Contacter
                 </Button>
@@ -55,43 +53,43 @@ const Footer = () => {
 
           <ScrollReveal animation="fade-up" delay={200} duration={500}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer" className="group p-5 rounded-2xl christmas-border bg-card/30 hover:glow-gold transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-christmas-green/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <WhatsAppIcon className="w-6 h-6 text-christmas-green" />
+              <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer" className="group p-5 rounded-xl luxury-border bg-card/30 hover:bg-card/50 transition-all duration-300">
+                <div className="w-11 h-11 rounded-lg bg-luxury-forest/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <WhatsAppIcon className="w-5 h-5 text-luxury-forest" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-1">WhatsApp</h4>
-                <p className="text-sm text-muted-foreground font-body">+1 450 804 0166</p>
+                <h4 className="font-semibold text-foreground mb-1 text-sm">WhatsApp</h4>
+                <p className="text-xs text-muted-foreground font-body">+1 450 804 0166</p>
               </a>
 
-              <a href="mailto:contact@quebeciptv.ca" className="group p-5 rounded-2xl christmas-border bg-card/30 hover:glow-gold transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-christmas-red/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Mail className="w-6 h-6 text-christmas-red" />
+              <a href="mailto:contact@quebeciptv.ca" className="group p-5 rounded-xl luxury-border bg-card/30 hover:bg-card/50 transition-all duration-300">
+                <div className="w-11 h-11 rounded-lg bg-luxury-burgundy/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Mail className="w-5 h-5 text-luxury-burgundy-light" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-1">Courriel</h4>
-                <p className="text-sm text-muted-foreground font-body break-all">contact@quebeciptv.ca</p>
+                <h4 className="font-semibold text-foreground mb-1 text-sm">Courriel</h4>
+                <p className="text-xs text-muted-foreground font-body break-all">contact@quebeciptv.ca</p>
               </a>
 
-              <div className="group p-5 rounded-2xl christmas-border bg-card/30 hover:glow-gold transition-all duration-300">
-                <div className="w-12 h-12 rounded-xl bg-christmas-gold/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <MapPin className="w-6 h-6 text-christmas-gold" />
+              <div className="group p-5 rounded-xl luxury-border bg-card/30 hover:bg-card/50 transition-all duration-300">
+                <div className="w-11 h-11 rounded-lg bg-luxury-gold/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <MapPin className="w-5 h-5 text-luxury-gold" />
                 </div>
-                <h4 className="font-semibold text-foreground mb-1">Emplacement</h4>
-                <p className="text-sm text-muted-foreground font-body">Québec, Canada 🇨🇦</p>
+                <h4 className="font-semibold text-foreground mb-1 text-sm">Emplacement</h4>
+                <p className="text-xs text-muted-foreground font-body">Québec, Canada 🇨🇦</p>
               </div>
             </div>
           </ScrollReveal>
         </div>
 
         <ScrollReveal animation="fade" delay={300} duration={500}>
-          <div className="pt-8 border-t border-christmas-green/30">
+          <div className="pt-8 border-t border-luxury-gold/10">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-sm text-muted-foreground font-body">
-                © {new Date().getFullYear()} Quebec IPTV. Tous droits réservés. 🎄
+                © {new Date().getFullYear()} Quebec IPTV. Tous droits réservés.
               </p>
-              <div className="flex items-center gap-8">
-                <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors font-body">Confidentialité</a>
-                <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors font-body">Conditions</a>
-                <a href="#" className="text-sm text-muted-foreground hover:text-christmas-gold transition-colors font-body">Remboursement</a>
+              <div className="flex items-center gap-6">
+                <a href="#" className="text-sm text-muted-foreground hover:text-luxury-gold transition-colors font-body">Confidentialité</a>
+                <a href="#" className="text-sm text-muted-foreground hover:text-luxury-gold transition-colors font-body">Conditions</a>
+                <a href="#" className="text-sm text-muted-foreground hover:text-luxury-gold transition-colors font-body">Remboursement</a>
               </div>
             </div>
           </div>
