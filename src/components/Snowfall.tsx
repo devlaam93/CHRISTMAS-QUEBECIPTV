@@ -1,46 +1,60 @@
 import { useEffect, useState } from 'react';
 
-interface Ember {
+interface Snowflake {
   id: number;
   left: number;
   animationDuration: number;
   animationDelay: number;
   size: number;
+  type: 'dot' | 'star' | 'flake';
 }
 
 const Snowfall = () => {
-  const [embers, setEmbers] = useState<Ember[]>([]);
+  const [snowflakes, setSnowflakes] = useState<Snowflake[]>([]);
 
   useEffect(() => {
-    const particles: Ember[] = [];
-    for (let i = 0; i < 30; i++) {
+    const particles: Snowflake[] = [];
+    const types: ('dot' | 'star' | 'flake')[] = ['dot', 'star', 'flake'];
+    
+    for (let i = 0; i < 50; i++) {
       particles.push({
         id: i,
         left: Math.random() * 100,
-        animationDuration: 6 + Math.random() * 8,
-        animationDelay: Math.random() * 6,
-        size: 2 + Math.random() * 4,
+        animationDuration: 8 + Math.random() * 8,
+        animationDelay: Math.random() * 8,
+        size: 4 + Math.random() * 8,
+        type: types[Math.floor(Math.random() * types.length)],
       });
     }
-    setEmbers(particles);
+    setSnowflakes(particles);
   }, []);
+
+  const renderSnowflake = (flake: Snowflake) => {
+    if (flake.type === 'star') {
+      return '✦';
+    } else if (flake.type === 'flake') {
+      return '❄';
+    }
+    return '●';
+  };
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-      {embers.map((ember) => (
+      {snowflakes.map((flake) => (
         <div
-          key={ember.id}
-          className="absolute rounded-full"
+          key={flake.id}
+          className="absolute text-white drop-shadow-md"
           style={{
-            left: `${ember.left}%`,
-            bottom: 0,
-            width: `${ember.size}px`,
-            height: `${ember.size}px`,
-            background: `radial-gradient(circle, hsl(var(--fire-orange)) 0%, hsl(var(--fire-amber) / 0.5) 50%, transparent 70%)`,
-            animation: `ember ${ember.animationDuration}s ease-out infinite`,
-            animationDelay: `${ember.animationDelay}s`,
+            left: `${flake.left}%`,
+            top: '-20px',
+            fontSize: `${flake.size}px`,
+            opacity: 0.6 + Math.random() * 0.4,
+            animation: `snow ${flake.animationDuration}s linear infinite`,
+            animationDelay: `${flake.animationDelay}s`,
           }}
-        />
+        >
+          {renderSnowflake(flake)}
+        </div>
       ))}
     </div>
   );
