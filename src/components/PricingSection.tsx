@@ -15,7 +15,7 @@ const PricingSection = () => {
     { name: 'Rattrapage & EPG', standard: true, premium: true },
     { name: 'Qualité UHD, FHD, HD', standard: true, premium: true },
     { name: 'Technologie Anti-Gel™', standard: '9.8', premium: '10.0' },
-    { name: 'Protection VPN + Vie Privée', standard: false, premium: true, icon: Shield },
+    { name: 'Protection VPN', standard: false, premium: true, icon: Shield },
     { name: 'Support 24/7', standard: true, premium: true, icon: Headphones },
     { name: 'Garantie Remboursement', standard: '7 Jours', premium: '14 Jours' },
   ];
@@ -26,7 +26,8 @@ const PricingSection = () => {
       icon: Zap,
       title: 'Standard',
       subtitle: 'Serveur Performance',
-      color: 'forest',
+      gradient: 'btn-gradient-green',
+      color: 'xmas-green',
       options: [
         { duration: '12 Mois', price: '39.99', originalPrice: '119', discount: '80%', link: 'https://order.quebeciptv.ca/step/checkout-12-months-iptv-subscriptions-2/' },
         { duration: '24 Mois', price: '79.99', originalPrice: '199', discount: '80%', link: 'https://order.quebeciptv.ca/step/checkout-24-month-iptv-subscriptions-2/' },
@@ -37,7 +38,8 @@ const PricingSection = () => {
       icon: Crown,
       title: 'Premium',
       subtitle: 'Serveur Performance',
-      color: 'gold',
+      gradient: 'btn-gradient-red',
+      color: 'xmas-red',
       popular: true,
       options: [
         { duration: '12 Mois', price: '59.99', originalPrice: '179', discount: '80%', link: 'https://order.quebeciptv.ca/step/checkout-12-months-iptv-premium-subscriptions-2/', popular: true },
@@ -47,70 +49,68 @@ const PricingSection = () => {
   ];
 
   return (
-    <section id="pricing" className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-luxury-burgundy/5 to-transparent" />
-      
-      <div className="container mx-auto px-4 relative">
+    <section id="pricing" className="py-24 relative">
+      <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-3 mb-6">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-luxury-gold/50" />
-              <span className="text-xs font-medium text-luxury-gold tracking-[0.3em] uppercase font-body">
-                Forfaits Exclusifs
-              </span>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-luxury-gold/50" />
-            </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground mb-4">
-              Choisissez Votre <span className="text-luxury-gold">Expérience</span>
+            <span className="inline-block px-4 py-2 rounded-full glass-card text-sm font-medium text-xmas-red mb-4 font-body">
+              🎄 Forfaits de Noël
+            </span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground mb-4">
+              Choisissez Votre <span className="text-gradient-xmas">Forfait</span>
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto font-body">
-              Deux niveaux d'excellence pour votre divertissement premium
+              Deux options pour un divertissement illimité au Canada
             </p>
           </div>
         </ScrollReveal>
 
         {/* Comparison Table */}
         <ScrollReveal delay={0.2}>
-          <div className="luxury-border rounded-xl overflow-hidden mb-16 bg-card/40 backdrop-blur-sm">
+          <div className="glass-card overflow-hidden mb-16">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-luxury-gold/10">
+                  <tr className="border-b border-border/20">
                     <th className="text-left p-5 text-foreground font-display text-lg">Fonctionnalités</th>
-                    <th className="text-center p-5 w-40">
+                    <th className="text-center p-5 w-36">
                       <div className="flex flex-col items-center">
-                        <Zap className="w-6 h-6 text-luxury-forest mb-2" />
-                        <span className="text-luxury-forest font-display text-lg">Standard</span>
+                        <div className="w-10 h-10 rounded-full btn-gradient-green flex items-center justify-center mb-2">
+                          <Zap className="w-5 h-5 text-white" />
+                        </div>
+                        <span className="text-xmas-green font-display">Standard</span>
                       </div>
                     </th>
-                    <th className="text-center p-5 w-40 bg-luxury-gold/5">
+                    <th className="text-center p-5 w-36 bg-xmas-red/5">
                       <div className="flex flex-col items-center">
-                        <Crown className="w-6 h-6 text-luxury-gold mb-2" />
-                        <span className="text-luxury-gold font-display text-lg">Premium</span>
-                        <span className="text-[10px] text-luxury-burgundy-light mt-1 font-body tracking-wider">POPULAIRE</span>
+                        <div className="w-10 h-10 rounded-full btn-gradient-red flex items-center justify-center mb-2">
+                          <Crown className="w-5 h-5 text-white" />
+                        </div>
+                        <span className="text-xmas-red font-display">Premium</span>
+                        <span className="text-[10px] text-xmas-gold mt-1 font-body">⭐ POPULAIRE</span>
                       </div>
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {features.map((feature, index) => (
-                    <tr key={feature.name} className="border-b border-border/30 hover:bg-card/30 transition-colors">
+                    <tr key={feature.name} className="border-b border-border/10 hover:bg-muted/30 transition-colors">
                       <td className="p-4 text-muted-foreground flex items-center gap-2 font-body text-sm">
-                        {feature.icon && <feature.icon className="w-4 h-4 text-luxury-gold/60" />}
+                        {feature.icon && <feature.icon className="w-4 h-4 text-xmas-gold" />}
                         {feature.name}
                       </td>
                       <td className="text-center p-4">
                         {typeof feature.standard === 'boolean' ? (
-                          feature.standard ? <Check className="w-5 h-5 text-luxury-forest mx-auto" /> : <span className="text-muted-foreground/30">—</span>
+                          feature.standard ? <Check className="w-5 h-5 text-xmas-green mx-auto" /> : <span className="text-muted-foreground/30">—</span>
                         ) : (
-                          <span className="text-luxury-forest font-semibold font-body text-sm">{feature.standard}</span>
+                          <span className="text-xmas-green font-semibold font-body text-sm">{feature.standard}</span>
                         )}
                       </td>
-                      <td className="text-center p-4 bg-luxury-gold/5">
+                      <td className="text-center p-4 bg-xmas-red/5">
                         {typeof feature.premium === 'boolean' ? (
-                          feature.premium ? <Check className="w-5 h-5 text-luxury-gold mx-auto" /> : <span className="text-muted-foreground/30">—</span>
+                          feature.premium ? <Check className="w-5 h-5 text-xmas-red mx-auto" /> : <span className="text-muted-foreground/30">—</span>
                         ) : (
-                          <span className="text-luxury-gold font-semibold font-body text-sm">{feature.premium}</span>
+                          <span className="text-xmas-red font-semibold font-body text-sm">{feature.premium}</span>
                         )}
                       </td>
                     </tr>
@@ -125,37 +125,37 @@ const PricingSection = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {plans.map((plan, planIndex) => (
             <ScrollReveal key={plan.type} delay={0.1 * planIndex}>
-              <div className={`relative luxury-border rounded-xl p-8 bg-card/40 backdrop-blur-sm ${plan.popular ? 'ring-1 ring-luxury-gold/50' : ''}`}>
+              <div className={`relative glass-card p-8 ${plan.popular ? 'ring-2 ring-xmas-red/50' : ''}`}>
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-luxury-burgundy text-luxury-champagne px-4 py-1 rounded-full text-xs font-semibold font-body tracking-wider">
-                    RECOMMANDÉ
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 btn-gradient-red text-white px-4 py-1 rounded-full text-xs font-semibold font-body">
+                    🔥 RECOMMANDÉ
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <plan.icon className={`w-10 h-10 mx-auto mb-4 ${plan.color === 'gold' ? 'text-luxury-gold' : 'text-luxury-forest'}`} />
-                  <h3 className={`text-2xl font-display font-semibold ${plan.color === 'gold' ? 'text-luxury-gold' : 'text-luxury-forest'}`}>
-                    {plan.title}
-                  </h3>
+                  <div className={`w-14 h-14 rounded-2xl ${plan.gradient} flex items-center justify-center mx-auto mb-4`}>
+                    <plan.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className={`text-2xl font-display font-bold text-${plan.color}`}>{plan.title}</h3>
                   <p className="text-muted-foreground text-sm font-body mt-1">{plan.subtitle}</p>
                 </div>
 
                 <div className="space-y-4">
                   {plan.options.map((option) => (
-                    <div key={option.duration} className={`p-5 rounded-lg border transition-all ${option.popular ? 'border-luxury-gold/40 bg-luxury-gold/5' : 'border-border/30 bg-card/30'}`}>
+                    <div key={option.duration} className={`p-5 rounded-2xl transition-all ${option.popular ? 'bg-xmas-red/10 border-2 border-xmas-red/30' : 'bg-muted/30 border border-border/30'}`}>
                       <div className="flex justify-between items-center mb-3">
                         <span className="font-semibold text-foreground font-body">{option.duration}</span>
-                        <span className="bg-luxury-burgundy/80 text-luxury-champagne text-xs px-2 py-1 rounded font-body">
+                        <span className="btn-gradient-gold text-white text-xs px-2 py-1 rounded-full font-body">
                           -{option.discount}
                         </span>
                       </div>
                       <div className="flex items-end gap-2 mb-4">
                         <span className="text-3xl font-display font-bold text-foreground">${option.price}</span>
                         <span className="text-muted-foreground line-through text-sm font-body mb-1">${option.originalPrice}</span>
-                        <span className="text-luxury-forest text-xs font-body mb-1 ml-auto">+1 MOIS GRATUIT</span>
+                        <span className="text-xmas-green text-xs font-body mb-1 ml-auto">+1 MOIS GRATUIT</span>
                       </div>
                       <a href={option.link} target="_blank" rel="noopener noreferrer">
-                        <Button className={`w-full rounded-md font-body group ${option.popular ? 'bg-gradient-gold text-luxury-forest-dark hover:opacity-90' : 'bg-luxury-forest hover:bg-luxury-forest-light text-foreground'}`}>
+                        <Button className={`w-full rounded-full font-body group ${plan.gradient} hover:opacity-90`}>
                           Commander
                           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                         </Button>
@@ -168,11 +168,10 @@ const PricingSection = () => {
           ))}
         </div>
 
-        {/* Payment */}
         <ScrollReveal delay={0.4}>
           <div className="mt-12 text-center">
             <p className="text-muted-foreground text-sm mb-4 font-body">Paiement 100% sécurisé</p>
-            <img src={paymentBadges} alt="Méthodes de paiement" className="h-8 mx-auto opacity-60" />
+            <img src={paymentBadges} alt="Méthodes de paiement" className="h-8 mx-auto opacity-70" />
           </div>
         </ScrollReveal>
       </div>
