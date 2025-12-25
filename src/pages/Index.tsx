@@ -18,7 +18,6 @@ const Index = () => {
       <main>
         <HeroSection />
         <ChannelCarousel />
-        <PricingSection />
         <PlatinumSection />
         <FeaturesSection />
         <TestimonialsSection />
