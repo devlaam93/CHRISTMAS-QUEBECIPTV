@@ -12,10 +12,10 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="min-h-screen bg-white relative">
       <Snowfall />
       <Header />
-      <main>
+      <main className="mesh-gradient">
         <HeroSection />
         <ChannelCarousel />
         <PricingSection />

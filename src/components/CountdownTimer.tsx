@@ -31,34 +31,27 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
   }, [targetDate]);
 
   const timeUnits = [
-    { value: timeLeft.days, label: 'Jours', labelShort: 'J' },
-    { value: timeLeft.hours, label: 'Heures', labelShort: 'H' },
-    { value: timeLeft.minutes, label: 'Min', labelShort: 'M' },
-    { value: timeLeft.seconds, label: 'Sec', labelShort: 'S' },
+    { value: timeLeft.days, label: 'Jours' },
+    { value: timeLeft.hours, label: 'Heures' },
+    { value: timeLeft.minutes, label: 'Min' },
+    { value: timeLeft.seconds, label: 'Sec' },
   ];
 
   return (
-    <div className="flex gap-3 md:gap-5 justify-center">
+    <div className="flex gap-3 md:gap-4 justify-center">
       {timeUnits.map((unit, index) => (
         <div key={unit.label} className="flex flex-col items-center">
-          <div className="relative">
-            <div 
-              className="luxury-border w-16 h-20 md:w-20 md:h-24 rounded-lg flex flex-col items-center justify-center bg-card/80 backdrop-blur-sm animate-glow-pulse"
-              style={{ animationDelay: `${index * 0.3}s` }}
-            >
-              <span className="text-2xl md:text-4xl font-display font-bold text-luxury-gold">
-                {String(unit.value).padStart(2, '0')}
-              </span>
-              <span className="text-[10px] md:text-xs text-luxury-champagne uppercase tracking-widest font-body">
-                {unit.labelShort}
-              </span>
-            </div>
-            {/* Decorative corner accents */}
-            <div className="absolute -top-1 -left-1 w-3 h-3 border-t border-l border-luxury-gold/50" />
-            <div className="absolute -top-1 -right-1 w-3 h-3 border-t border-r border-luxury-gold/50" />
-            <div className="absolute -bottom-1 -left-1 w-3 h-3 border-b border-l border-luxury-gold/50" />
-            <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b border-r border-luxury-gold/50" />
+          <div 
+            className="glass-card w-16 h-20 md:w-20 md:h-24 flex flex-col items-center justify-center animate-pulse-soft"
+            style={{ animationDelay: `${index * 0.2}s` }}
+          >
+            <span className="text-2xl md:text-4xl font-display font-bold text-gradient-xmas">
+              {String(unit.value).padStart(2, '0')}
+            </span>
           </div>
+          <span className="text-xs text-muted-foreground mt-2 font-medium uppercase tracking-wider font-body">
+            {unit.label}
+          </span>
         </div>
       ))}
     </div>

@@ -7,7 +7,6 @@ interface Snowflake {
   animationDelay: number;
   size: number;
   opacity: number;
-  type: 'dot' | 'star' | 'flake';
 }
 
 const Snowfall = () => {
@@ -15,34 +14,18 @@ const Snowfall = () => {
 
   useEffect(() => {
     const flakes: Snowflake[] = [];
-    const types: ('dot' | 'star' | 'flake')[] = ['dot', 'star', 'flake'];
-    
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 40; i++) {
       flakes.push({
         id: i,
         left: Math.random() * 100,
-        animationDuration: 10 + Math.random() * 15,
-        animationDelay: Math.random() * 10,
-        size: 3 + Math.random() * 5,
-        opacity: 0.3 + Math.random() * 0.5,
-        type: types[Math.floor(Math.random() * types.length)],
+        animationDuration: 12 + Math.random() * 10,
+        animationDelay: Math.random() * 8,
+        size: 4 + Math.random() * 8,
+        opacity: 0.15 + Math.random() * 0.25,
       });
     }
     setSnowflakes(flakes);
   }, []);
-
-  const getFlakeStyle = (flake: Snowflake) => {
-    if (flake.type === 'star') {
-      return {
-        background: 'transparent',
-        boxShadow: `0 0 ${flake.size}px hsl(42 85% 55% / ${flake.opacity})`,
-      };
-    }
-    return {
-      background: `hsl(45 50% 95% / ${flake.opacity})`,
-      boxShadow: `0 0 ${flake.size * 2}px hsl(45 50% 95% / 0.3)`,
-    };
-  };
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
@@ -54,9 +37,10 @@ const Snowfall = () => {
             left: `${flake.left}%`,
             width: `${flake.size}px`,
             height: `${flake.size}px`,
+            opacity: flake.opacity,
             animation: `snow ${flake.animationDuration}s linear infinite`,
             animationDelay: `${flake.animationDelay}s`,
-            ...getFlakeStyle(flake),
+            background: `radial-gradient(circle, hsl(var(--xmas-gold) / 0.6) 0%, transparent 70%)`,
           }}
         />
       ))}
