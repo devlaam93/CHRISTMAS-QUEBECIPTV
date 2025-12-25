@@ -34,7 +34,7 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <div className={`transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-xmas-green/20' : 'bg-white/80 backdrop-blur-md'}`}>
+      <div className={`transition-all duration-300 ${scrolled ? 'bg-background/95 backdrop-blur-xl border-b border-border/50' : 'bg-background/80 backdrop-blur-md'}`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <a href="#" className="flex items-center">
@@ -46,7 +46,7 @@ const Header = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-semibold text-foreground hover:text-xmas-red transition-colors font-body"
+                  className="text-sm font-semibold text-muted-foreground hover:text-xmas-red transition-colors font-body"
                 >
                   {link.label}
                 </a>
@@ -75,13 +75,13 @@ const Header = () => {
         </div>
 
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-xmas-green/20 shadow-lg">
+          <div className="lg:hidden bg-card border-t border-border/50">
             <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
               {navLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-semibold text-foreground hover:text-xmas-red transition-colors py-2 font-body"
+                  className="text-sm font-semibold text-muted-foreground hover:text-xmas-red transition-colors py-2 font-body"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}

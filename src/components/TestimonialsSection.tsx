@@ -33,8 +33,8 @@ const TestimonialsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <ScrollReveal key={index} animation="fade-up" delay={index * 100} duration={600}>
-              <div className="h-full bg-white p-6 rounded-3xl border-2 border-xmas-green/20 hover:border-xmas-red/30 transition-all duration-300 shadow-lg hover:shadow-xl">
-                <Quote className="w-8 h-8 text-xmas-red/20 mb-4" />
+              <div className="h-full card-dark p-6 border-xmas-green/20 hover:border-xmas-red/30 transition-all duration-300">
+                <Quote className="w-8 h-8 text-xmas-red/30 mb-4" />
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-xmas-gold text-xmas-gold" />
@@ -42,7 +42,7 @@ const TestimonialsSection = () => {
                 </div>
                 <p className="text-foreground/80 text-sm leading-relaxed mb-5 font-body">"{testimonial.text}"</p>
                 <div className="flex items-center gap-3 pt-4 border-t border-border/50">
-                  <div className="w-10 h-10 rounded-full bg-gradient-xmas flex items-center justify-center text-sm font-bold text-white font-body shadow-md">
+                  <div className="w-10 h-10 rounded-full bg-gradient-xmas flex items-center justify-center text-sm font-bold text-white font-body">
                     {testimonial.avatar}
                   </div>
                   <div>

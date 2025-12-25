@@ -42,7 +42,7 @@ const CountdownTimer = ({ targetDate }: CountdownTimerProps) => {
       {timeUnits.map((unit, index) => (
         <div key={unit.label} className="flex flex-col items-center">
           <div 
-            className={`bg-white border-4 ${index % 2 === 0 ? 'border-xmas-red/30' : 'border-xmas-green/30'} w-18 h-24 md:w-22 md:h-28 flex flex-col items-center justify-center rounded-2xl shadow-lg animate-glow-pulse`}
+            className={`card-dark ${index % 2 === 0 ? 'border-xmas-red/40' : 'border-xmas-green/40'} w-18 h-24 md:w-22 md:h-28 flex flex-col items-center justify-center rounded-2xl animate-glow-pulse`}
             style={{ animationDelay: `${index * 0.2}s`, width: '72px', height: '88px' }}
           >
             <span className={`text-3xl md:text-4xl font-display font-bold ${index % 2 === 0 ? 'text-xmas-red' : 'text-xmas-green'}`}>

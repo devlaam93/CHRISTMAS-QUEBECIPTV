@@ -16,7 +16,7 @@ const FAQSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal animation="fade-up" duration={700}>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border-2 border-xmas-green/30 text-sm font-bold text-xmas-green mb-4 font-body shadow-md">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full card-dark border-xmas-green/40 text-sm font-bold text-xmas-green mb-4 font-body">
               ❓ FAQ
             </span>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
@@ -31,7 +31,7 @@ const FAQSection = () => {
               <ScrollReveal key={index} animation="fade-up" delay={index * 100} duration={500}>
                 <AccordionItem 
                   value={`item-${index}`}
-                  className="bg-white px-6 rounded-2xl border-2 border-xmas-green/20 shadow-md data-[state=open]:ring-2 data-[state=open]:ring-xmas-red/30 transition-all"
+                  className="card-dark px-6 border-xmas-green/20 data-[state=open]:ring-1 data-[state=open]:ring-xmas-red/40 transition-all"
                 >
                   <AccordionTrigger className="text-left font-display font-bold hover:text-xmas-red transition-colors py-5 text-base">
                     {faq.question}

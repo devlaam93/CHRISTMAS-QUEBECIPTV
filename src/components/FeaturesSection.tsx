@@ -19,7 +19,7 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal animation="fade-up" duration={700}>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border-2 border-xmas-green/30 text-sm font-bold text-xmas-green mb-4 font-body shadow-md">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full card-dark border-xmas-green/40 text-sm font-bold text-xmas-green mb-4 font-body">
               ⚡ Avantages
             </span>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">

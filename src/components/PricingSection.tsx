@@ -49,7 +49,7 @@ const PricingSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border-2 border-xmas-red/30 text-sm font-bold text-xmas-red mb-4 font-body shadow-md">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full card-dark border-xmas-red/40 text-sm font-bold text-xmas-red mb-4 font-body">
               <Gift className="w-4 h-4" />
               🎁 Forfaits de Noël
             </span>
@@ -64,15 +64,15 @@ const PricingSection = () => {
 
         {/* Comparison Table */}
         <ScrollReveal delay={0.2}>
-          <div className="bg-white rounded-3xl shadow-xl border-2 border-xmas-green/20 overflow-hidden mb-16">
+          <div className="card-dark overflow-hidden mb-16">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b-2 border-xmas-green/20">
+                  <tr className="border-b border-border/50">
                     <th className="text-left p-5 text-foreground font-display text-lg">Fonctionnalités</th>
                     <th className="text-center p-5 w-36">
                       <div className="flex flex-col items-center">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-green flex items-center justify-center mb-2 shadow-md">
+                        <div className="w-12 h-12 rounded-2xl bg-gradient-green flex items-center justify-center mb-2">
                           <Zap className="w-6 h-6 text-white" />
                         </div>
                         <span className="text-xmas-green font-display font-bold">Standard</span>
@@ -80,7 +80,7 @@ const PricingSection = () => {
                     </th>
                     <th className="text-center p-5 w-36 bg-xmas-red/5">
                       <div className="flex flex-col items-center">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-xmas flex items-center justify-center mb-2 shadow-md">
+                        <div className="w-12 h-12 rounded-2xl bg-gradient-xmas flex items-center justify-center mb-2">
                           <Crown className="w-6 h-6 text-white" />
                         </div>
                         <span className="text-xmas-red font-display font-bold">Premium</span>
@@ -91,7 +91,7 @@ const PricingSection = () => {
                 </thead>
                 <tbody>
                   {features.map((feature) => (
-                    <tr key={feature.name} className="border-b border-border/50 hover:bg-muted/30 transition-colors">
+                    <tr key={feature.name} className="border-b border-border/30 hover:bg-muted/30 transition-colors">
                       <td className="p-4 text-muted-foreground flex items-center gap-2 font-body text-sm">
                         {feature.icon && <feature.icon className="w-4 h-4 text-xmas-green/60" />}
                         {feature.name}
@@ -122,7 +122,7 @@ const PricingSection = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {plans.map((plan, planIndex) => (
             <ScrollReveal key={plan.type} delay={0.1 * planIndex}>
-              <div className={`relative bg-white p-8 rounded-3xl shadow-xl ${plan.popular ? 'ring-4 ring-xmas-red/30 glow-red' : 'border-2 border-xmas-green/30'}`}>
+              <div className={`relative card-dark p-8 ${plan.popular ? 'ring-2 ring-xmas-red/50 glow-red' : 'border-xmas-green/30'}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-xmas text-white px-6 py-2 rounded-full text-sm font-bold font-body shadow-lg">
                     🎄 RECOMMANDÉ
@@ -130,7 +130,7 @@ const PricingSection = () => {
                 )}
                 
                 <div className="text-center mb-8">
-                  <div className={`w-16 h-16 rounded-2xl ${plan.popular ? 'bg-gradient-xmas' : 'bg-gradient-green'} flex items-center justify-center mx-auto mb-4 shadow-lg`}>
+                  <div className={`w-16 h-16 rounded-2xl ${plan.popular ? 'bg-gradient-xmas' : 'bg-gradient-green'} flex items-center justify-center mx-auto mb-4`}>
                     <plan.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className={`text-2xl font-display font-bold ${plan.popular ? 'text-xmas-red' : 'text-xmas-green'}`}>{plan.title}</h3>
@@ -139,7 +139,7 @@ const PricingSection = () => {
 
                 <div className="space-y-4">
                   {plan.options.map((option) => (
-                    <div key={option.duration} className={`p-5 rounded-2xl transition-all ${option.popular ? 'bg-xmas-red/10 border-2 border-xmas-red/30' : 'bg-muted/50 border-2 border-border/50'}`}>
+                    <div key={option.duration} className={`p-5 rounded-2xl transition-all ${option.popular ? 'bg-xmas-red/10 border border-xmas-red/30' : 'bg-muted/30 border border-border/50'}`}>
                       <div className="flex justify-between items-center mb-3">
                         <span className="font-bold text-foreground font-body">{option.duration}</span>
                         <span className="bg-gradient-xmas text-white text-xs px-3 py-1 rounded-full font-bold font-body">
@@ -168,7 +168,7 @@ const PricingSection = () => {
         <ScrollReveal delay={0.4}>
           <div className="mt-12 text-center">
             <p className="text-muted-foreground text-sm mb-4 font-body">🔒 Paiement 100% sécurisé</p>
-            <img src={paymentBadges} alt="Méthodes de paiement" className="h-8 mx-auto opacity-60" />
+            <img src={paymentBadges} alt="Méthodes de paiement" className="h-8 mx-auto opacity-50" />
           </div>
         </ScrollReveal>
       </div>

@@ -18,14 +18,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="relative bg-white border-t-4 border-xmas-green/30">
+    <footer id="contact" className="relative bg-card border-t border-border/50">
       <div className="container mx-auto px-4 py-16">
         <ScrollReveal animation="fade-up" delay={0} duration={500}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
             {highlights.map((item, index) => (
-              <div key={index} className="flex items-center justify-center gap-3 py-4 px-5 rounded-2xl bg-muted/50 border-2 border-xmas-green/20 hover:border-xmas-red/30 transition-all duration-300 group shadow-md">
+              <div key={index} className="flex items-center justify-center gap-3 py-4 px-5 rounded-2xl bg-muted/30 border border-border/50 hover:border-xmas-red/40 transition-all duration-300 group">
                 <item.icon className="w-5 h-5 text-xmas-green group-hover:text-xmas-red group-hover:scale-110 transition-all" />
-                <span className="text-sm font-bold font-body">{item.label}</span>
+                <span className="text-sm font-bold font-body text-foreground">{item.label}</span>
               </div>
             ))}
           </div>
@@ -40,7 +40,7 @@ const Footer = () => {
                 Streaming 4K cristallin, des milliers de chaînes, et un support de classe mondiale.
               </p>
               <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer">
-                <Button className="gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white border-0 font-body rounded-full shadow-lg">
+                <Button className="gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white border-0 font-body rounded-full">
                   <WhatsAppIcon className="w-5 h-5" />
                   Nous Contacter
                 </Button>
@@ -50,27 +50,27 @@ const Footer = () => {
 
           <ScrollReveal animation="fade-up" delay={200} duration={500}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer" className="group p-5 rounded-2xl bg-muted/50 border-2 border-xmas-green/20 hover:border-xmas-green/50 transition-all duration-300 shadow-md">
-                <div className="w-12 h-12 rounded-2xl bg-xmas-green/10 flex items-center justify-center mb-4 group-hover:bg-gradient-green transition-all shadow-sm">
+              <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer" className="group p-5 rounded-2xl bg-muted/30 border border-border/50 hover:border-xmas-green/50 transition-all duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-xmas-green/10 flex items-center justify-center mb-4 group-hover:bg-gradient-green transition-all">
                   <WhatsAppIcon className="w-6 h-6 text-xmas-green group-hover:text-white transition-colors" />
                 </div>
-                <h4 className="font-bold mb-1 text-sm">WhatsApp</h4>
+                <h4 className="font-bold mb-1 text-sm text-foreground">WhatsApp</h4>
                 <p className="text-xs text-muted-foreground font-body">+1 450 804 0166</p>
               </a>
 
-              <a href="mailto:contact@quebeciptv.ca" className="group p-5 rounded-2xl bg-muted/50 border-2 border-xmas-green/20 hover:border-xmas-red/50 transition-all duration-300 shadow-md">
-                <div className="w-12 h-12 rounded-2xl bg-xmas-red/10 flex items-center justify-center mb-4 group-hover:bg-gradient-xmas transition-all shadow-sm">
+              <a href="mailto:contact@quebeciptv.ca" className="group p-5 rounded-2xl bg-muted/30 border border-border/50 hover:border-xmas-red/50 transition-all duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-xmas-red/10 flex items-center justify-center mb-4 group-hover:bg-gradient-xmas transition-all">
                   <Mail className="w-6 h-6 text-xmas-red group-hover:text-white transition-colors" />
                 </div>
-                <h4 className="font-bold mb-1 text-sm">Courriel</h4>
+                <h4 className="font-bold mb-1 text-sm text-foreground">Courriel</h4>
                 <p className="text-xs text-muted-foreground font-body break-all">contact@quebeciptv.ca</p>
               </a>
 
-              <div className="group p-5 rounded-2xl bg-muted/50 border-2 border-xmas-green/20 hover:border-xmas-gold/50 transition-all duration-300 shadow-md">
-                <div className="w-12 h-12 rounded-2xl bg-xmas-gold/10 flex items-center justify-center mb-4 group-hover:bg-gradient-gold transition-all shadow-sm">
-                  <MapPin className="w-6 h-6 text-xmas-gold group-hover:text-foreground transition-colors" />
+              <div className="group p-5 rounded-2xl bg-muted/30 border border-border/50 hover:border-xmas-gold/50 transition-all duration-300">
+                <div className="w-12 h-12 rounded-2xl bg-xmas-gold/10 flex items-center justify-center mb-4 group-hover:bg-gradient-gold transition-all">
+                  <MapPin className="w-6 h-6 text-xmas-gold group-hover:text-background transition-colors" />
                 </div>
-                <h4 className="font-bold mb-1 text-sm">Emplacement</h4>
+                <h4 className="font-bold mb-1 text-sm text-foreground">Emplacement</h4>
                 <p className="text-xs text-muted-foreground font-body">Québec, Canada 🇨🇦</p>
               </div>
             </div>
@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
 
         <ScrollReveal animation="fade" delay={300} duration={500}>
-          <div className="pt-8 border-t-2 border-xmas-green/20">
+          <div className="pt-8 border-t border-border/50">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-sm text-muted-foreground font-body flex items-center gap-2">
                 <TreePine className="w-4 h-4 text-xmas-green" />
