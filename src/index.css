@@ -6,56 +6,56 @@
 
 @layer base {
   :root {
-    --background: 120 20% 97%;
-    --foreground: 150 30% 15%;
+    --background: 150 25% 8%;
+    --foreground: 40 30% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 150 30% 15%;
+    --card: 150 20% 12%;
+    --card-foreground: 40 30% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 150 30% 15%;
+    --popover: 150 20% 12%;
+    --popover-foreground: 40 30% 95%;
 
-    --primary: 350 85% 50%;
+    --primary: 350 85% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 145 60% 40%;
+    --secondary: 145 65% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 120 15% 92%;
-    --muted-foreground: 150 15% 45%;
+    --muted: 150 15% 18%;
+    --muted-foreground: 150 10% 55%;
 
-    --accent: 45 100% 50%;
-    --accent-foreground: 150 30% 15%;
+    --accent: 45 100% 55%;
+    --accent-foreground: 150 25% 8%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 150 15% 85%;
-    --input: 150 15% 85%;
-    --ring: 350 85% 50%;
+    --border: 150 15% 20%;
+    --input: 150 15% 20%;
+    --ring: 350 85% 55%;
 
     --radius: 1rem;
 
     /* Christmas Theme Colors */
-    --xmas-red: 350 85% 50%;
-    --xmas-red-light: 355 85% 60%;
-    --xmas-red-dark: 345 85% 40%;
-    --xmas-green: 145 60% 40%;
-    --xmas-green-light: 140 55% 50%;
-    --xmas-green-dark: 150 65% 30%;
-    --xmas-gold: 45 100% 50%;
-    --xmas-gold-light: 50 100% 65%;
-    --xmas-cream: 40 50% 97%;
-    --xmas-snow: 200 30% 98%;
+    --xmas-red: 350 85% 55%;
+    --xmas-red-light: 355 85% 65%;
+    --xmas-red-dark: 345 85% 45%;
+    --xmas-green: 145 65% 45%;
+    --xmas-green-light: 140 60% 55%;
+    --xmas-green-dark: 150 70% 35%;
+    --xmas-gold: 45 100% 55%;
+    --xmas-gold-light: 50 100% 70%;
+    --xmas-dark: 150 25% 8%;
+    --xmas-dark-card: 150 20% 12%;
 
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 150 30% 15%;
-    --sidebar-primary: 350 85% 50%;
+    --sidebar-background: 150 20% 12%;
+    --sidebar-foreground: 40 30% 95%;
+    --sidebar-primary: 350 85% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 145 60% 40%;
+    --sidebar-accent: 145 65% 45%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 150 15% 85%;
-    --sidebar-ring: 350 85% 50%;
+    --sidebar-border: 150 15% 20%;
+    --sidebar-ring: 350 85% 55%;
   }
 }
 
@@ -101,20 +101,20 @@
 
   .bg-xmas-pattern {
     background: 
-      radial-gradient(circle at 20% 80%, hsl(var(--xmas-red) / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--xmas-green) / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 50% 50%, hsl(var(--xmas-gold) / 0.05) 0%, transparent 60%),
+      radial-gradient(circle at 20% 80%, hsl(var(--xmas-red) / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--xmas-green) / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, hsl(var(--xmas-gold) / 0.03) 0%, transparent 60%),
       hsl(var(--background));
   }
 
   .text-gradient-xmas {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--xmas-red)) 0%, hsl(var(--xmas-red-dark)) 100%);
+    background-image: linear-gradient(135deg, hsl(var(--xmas-red)) 0%, hsl(var(--xmas-red-light)) 100%);
   }
 
   .text-gradient-green {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--xmas-green)) 0%, hsl(var(--xmas-green-dark)) 100%);
+    background-image: linear-gradient(135deg, hsl(var(--xmas-green)) 0%, hsl(var(--xmas-green-light)) 100%);
   }
 
   .text-gradient-gold {
@@ -124,51 +124,48 @@
 
   /* Cards */
   .card-xmas {
-    @apply bg-card border-2 border-xmas-green/20 rounded-2xl shadow-lg;
+    @apply bg-card border border-xmas-green/30 rounded-2xl;
+    box-shadow: 0 0 0 1px hsl(var(--border) / 0.3), 0 20px 40px -20px hsl(0 0% 0% / 0.5);
   }
 
-  .card-festive {
-    @apply bg-card border-2 rounded-2xl shadow-xl;
-    border-image: linear-gradient(135deg, hsl(var(--xmas-red)), hsl(var(--xmas-green))) 1;
-  }
-
-  .card-snow {
-    @apply bg-white/80 backdrop-blur-sm border border-xmas-green/10 rounded-2xl shadow-lg;
+  .card-dark {
+    @apply bg-card border border-border/50 rounded-2xl;
+    box-shadow: 0 0 0 1px hsl(var(--border) / 0.3), 0 20px 40px -20px hsl(0 0% 0% / 0.5);
   }
 
   /* Glows */
   .glow-red {
-    box-shadow: 0 0 40px hsl(var(--xmas-red) / 0.3), 0 0 80px hsl(var(--xmas-red) / 0.15);
+    box-shadow: 0 0 40px hsl(var(--xmas-red) / 0.4), 0 0 80px hsl(var(--xmas-red) / 0.2);
   }
 
   .glow-green {
-    box-shadow: 0 0 40px hsl(var(--xmas-green) / 0.3), 0 0 80px hsl(var(--xmas-green) / 0.15);
+    box-shadow: 0 0 40px hsl(var(--xmas-green) / 0.4), 0 0 80px hsl(var(--xmas-green) / 0.2);
   }
 
   .glow-gold {
-    box-shadow: 0 0 40px hsl(var(--xmas-gold) / 0.4), 0 0 80px hsl(var(--xmas-gold) / 0.2);
+    box-shadow: 0 0 40px hsl(var(--xmas-gold) / 0.5), 0 0 80px hsl(var(--xmas-gold) / 0.25);
   }
 
   /* Buttons */
   .btn-xmas {
     background: linear-gradient(135deg, hsl(var(--xmas-red)) 0%, hsl(var(--xmas-red-dark)) 100%);
     @apply text-white font-bold shadow-lg transition-all duration-300;
-    box-shadow: 0 8px 25px -8px hsl(var(--xmas-red) / 0.5);
+    box-shadow: 0 8px 25px -8px hsl(var(--xmas-red) / 0.6);
   }
 
   .btn-xmas:hover {
-    box-shadow: 0 12px 35px -8px hsl(var(--xmas-red) / 0.6);
+    box-shadow: 0 12px 35px -8px hsl(var(--xmas-red) / 0.7);
     transform: translateY(-2px);
   }
 
   .btn-green {
     background: linear-gradient(135deg, hsl(var(--xmas-green)) 0%, hsl(var(--xmas-green-dark)) 100%);
     @apply text-white font-bold shadow-lg transition-all duration-300;
-    box-shadow: 0 8px 25px -8px hsl(var(--xmas-green) / 0.5);
+    box-shadow: 0 8px 25px -8px hsl(var(--xmas-green) / 0.6);
   }
 
   .btn-green:hover {
-    box-shadow: 0 12px 35px -8px hsl(var(--xmas-green) / 0.6);
+    box-shadow: 0 12px 35px -8px hsl(var(--xmas-green) / 0.7);
     transform: translateY(-2px);
   }
 
@@ -177,7 +174,7 @@
   }
 
   .btn-outline-xmas:hover {
-    @apply bg-xmas-red/10;
+    @apply bg-xmas-red/20;
   }
 
   /* Animations */
@@ -244,7 +241,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--xmas-cream));
+  background: hsl(var(--xmas-dark));
 }
 
 ::-webkit-scrollbar-thumb {

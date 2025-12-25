@@ -21,7 +21,7 @@ const PlatinumSection = () => {
       <div className="container mx-auto px-4 relative">
         <ScrollReveal animation="fade-up" duration={700}>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 bg-white border-2 border-xmas-gold/50 px-5 py-2.5 rounded-full mb-6 shadow-md">
+            <div className="inline-flex items-center gap-2 card-dark border-xmas-gold/50 px-5 py-2.5 rounded-full mb-6">
               <Crown className="w-5 h-5 text-xmas-gold" />
               <span className="text-sm font-bold text-xmas-gold font-body">Collection Platinum</span>
               <TreePine className="w-5 h-5 text-xmas-green" />
@@ -38,16 +38,16 @@ const PlatinumSection = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-16">
           {plans.map((plan, index) => (
             <ScrollReveal key={plan.duration} animation="fade-up" delay={index * 100}>
-              <div className={`relative bg-white p-8 rounded-3xl shadow-xl ${plan.popular ? 'ring-4 ring-xmas-gold/50 glow-gold' : 'border-2 border-xmas-green/30'}`}>
+              <div className={`relative card-dark p-8 ${plan.popular ? 'ring-2 ring-xmas-gold/50 glow-gold' : 'border-xmas-green/30'}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-gold text-foreground px-6 py-2 rounded-full text-sm font-bold font-body shadow-lg">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-gold text-background px-6 py-2 rounded-full text-sm font-bold font-body shadow-lg">
                     ⭐ MEILLEURE VALEUR
                   </div>
                 )}
                 
                 <div className="text-center">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-gold flex items-center justify-center mx-auto mb-4 shadow-lg">
-                    <Crown className="w-8 h-8 text-foreground" />
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-gold flex items-center justify-center mx-auto mb-4">
+                    <Crown className="w-8 h-8 text-background" />
                   </div>
                   <div className="text-5xl font-display font-bold text-gradient-gold mb-1">{plan.duration}</div>
                   <div className="text-muted-foreground font-body mb-6">{plan.unit}</div>
@@ -73,13 +73,13 @@ const PlatinumSection = () => {
         </div>
 
         <ScrollReveal animation="fade-up" delay={200}>
-          <div className="bg-white p-8 rounded-3xl shadow-xl border-2 border-xmas-green/20 max-w-3xl mx-auto">
+          <div className="card-dark p-8 max-w-3xl mx-auto border-xmas-green/30">
             <h3 className="text-xl font-display font-bold text-center mb-8 text-gradient-xmas flex items-center justify-center gap-2">
               🎄 Tout Inclus dans Platinum 🎁
             </h3>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
               {allFeatures.map((feature, index) => (
-                <div key={index} className="flex items-center gap-3 p-3 rounded-xl bg-muted/50 border border-border/50">
+                <div key={index} className="flex items-center gap-3 p-3 rounded-xl bg-muted/30 border border-border/50">
                   <Check className="w-5 h-5 text-xmas-green flex-shrink-0" />
                   <span className="text-foreground text-sm font-body font-medium">{feature}</span>
                 </div>

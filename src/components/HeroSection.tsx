@@ -7,21 +7,26 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-36 pb-20">
-      {/* Festive Background */}
-      <div className="absolute inset-0 bg-xmas-pattern" />
+      {/* Dark Festive Background */}
+      <div className="absolute inset-0 bg-background" />
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-xmas-red/10 rounded-full blur-[150px]" />
+        <div className="absolute bottom-20 right-1/4 w-[400px] h-[400px] bg-xmas-green/10 rounded-full blur-[150px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-xmas-gold/5 rounded-full blur-[100px]" />
+      </div>
       
       {/* Decorative Elements */}
-      <div className="absolute top-32 left-10 text-6xl animate-float opacity-80">🎄</div>
-      <div className="absolute top-48 right-16 text-5xl animate-bounce-slow opacity-80">🎁</div>
-      <div className="absolute bottom-40 left-20 text-4xl animate-sway opacity-70">⭐</div>
-      <div className="absolute bottom-60 right-24 text-5xl animate-float opacity-70" style={{ animationDelay: '1s' }}>🎅</div>
-      <div className="absolute top-72 left-1/4 text-3xl animate-twinkle opacity-60">✨</div>
-      <div className="absolute top-96 right-1/3 text-3xl animate-twinkle opacity-60" style={{ animationDelay: '0.5s' }}>❄️</div>
+      <div className="absolute top-32 left-10 text-6xl animate-float opacity-70">🎄</div>
+      <div className="absolute top-48 right-16 text-5xl animate-bounce-slow opacity-70">🎁</div>
+      <div className="absolute bottom-40 left-20 text-4xl animate-sway opacity-60">⭐</div>
+      <div className="absolute bottom-60 right-24 text-5xl animate-float opacity-60" style={{ animationDelay: '1s' }}>🎅</div>
+      <div className="absolute top-72 left-1/4 text-3xl animate-twinkle opacity-50">✨</div>
+      <div className="absolute top-96 right-1/3 text-3xl animate-twinkle opacity-50" style={{ animationDelay: '0.5s' }}>❄️</div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white border-2 border-xmas-red/30 px-5 py-2.5 rounded-full mb-8 animate-scale-in shadow-lg">
+          <div className="inline-flex items-center gap-2 card-dark border-xmas-red/40 px-5 py-2.5 rounded-full mb-8 animate-scale-in">
             <Gift className="w-5 h-5 text-xmas-red animate-bounce-slow" />
             <span className="text-sm font-bold text-xmas-red font-body">🎄 Offre Spéciale de Noël</span>
             <TreePine className="w-5 h-5 text-xmas-green animate-sway" />
@@ -37,10 +42,10 @@ const HeroSection = () => {
 
           {/* Discount Display */}
           <div className="my-10 animate-scale-in" style={{ animationDelay: '0.2s' }}>
-            <div className="inline-flex items-center gap-4 bg-white border-4 border-xmas-green/30 px-8 py-6 rounded-3xl shadow-xl glow-gold">
+            <div className="inline-flex items-center gap-4 card-dark border-xmas-green/40 px-8 py-6 rounded-3xl glow-gold">
               <Star className="w-10 h-10 text-xmas-gold animate-twinkle" />
               <span className="text-6xl md:text-8xl font-display font-bold text-gradient-xmas">80%</span>
-              <div className="text-left border-l-4 border-xmas-green/30 pl-4 ml-2">
+              <div className="text-left border-l-2 border-xmas-green/40 pl-4 ml-2">
                 <div className="text-xmas-green font-display text-2xl md:text-3xl font-bold">RABAIS</div>
                 <div className="text-muted-foreground text-sm font-body flex items-center gap-1">
                   <Sparkles className="w-4 h-4 text-xmas-gold" />
