@@ -108,17 +108,20 @@ const ChannelCarousel = () => {
   return (
     <section className="py-16 md:py-24 relative overflow-hidden pb-[112px] pt-[9px]">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-muted/30 via-background to-muted/30" />
+      <div className="absolute inset-0 bg-xmas-pattern" />
 
       <div className="relative z-10">
         {/* Section Header */}
         <ScrollReveal animation="fade-up" duration={700}>
           <div className="text-center max-w-3xl mx-auto mb-12 px-4">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full card-dark border-xmas-red/40 text-sm font-bold text-xmas-red mb-4 font-body">
+              📺 Streaming
+            </span>
             <h2 className="text-3xl md:text-4xl font-display font-black mb-4">
-              Tous Vos <span className="text-quebec-orange">Favoris</span> En Un Seul Endroit
+              Tous Vos <span className="text-gradient-xmas">Favoris</span> En Un Seul Endroit
             </h2>
-            <p className="text-muted-foreground">
-              🍁 Diffusez du contenu de toutes les principales plateformes plus 30 000+ chaînes en direct
+            <p className="text-muted-foreground font-body">
+              🎄 Diffusez du contenu de toutes les principales plateformes plus 30 000+ chaînes en direct
             </p>
           </div>
         </ScrollReveal>
@@ -137,7 +140,7 @@ const ChannelCarousel = () => {
             {duplicatedPlatforms.map((platform, index) => (
               <div
                 key={`platform-${index}`}
-                className="flex-shrink-0 w-28 h-14 rounded-lg glass border border-border/50 flex items-center justify-center hover:border-quebec-orange/50 transition-all duration-300 hover:scale-105 group"
+                className="flex-shrink-0 w-28 h-14 rounded-lg card-dark border-xmas-green/30 flex items-center justify-center hover:border-xmas-red/50 transition-all duration-300 hover:scale-105 group"
               >
                 <img
                   src={platform.logo}
@@ -182,7 +185,7 @@ const ChannelCarousel = () => {
                 <div className="absolute inset-0 p-4 flex flex-col justify-end">
                   {/* Category Badge */}
                   <div className="absolute top-3 right-3">
-                    <span className="px-2 py-1 rounded-full text-[10px] font-bold bg-quebec-orange/90 text-white backdrop-blur-sm">
+                    <span className="px-2 py-1 rounded-full text-[10px] font-bold bg-gradient-xmas text-white backdrop-blur-sm">
                       {channel.count} Chaînes
                     </span>
                   </div>
@@ -198,7 +201,7 @@ const ChannelCarousel = () => {
                     {channel.features.slice(0, 3).map((feature, i) => (
                       <span
                         key={i}
-                        className="px-2 py-0.5 rounded-md text-[9px] font-medium bg-white/20 text-white/90 backdrop-blur-sm border border-white/10"
+                        className="px-2 py-0.5 rounded-md text-[9px] font-medium bg-xmas-green/30 text-white/90 backdrop-blur-sm border border-xmas-green/20"
                       >
                         {feature}
                       </span>
@@ -207,7 +210,7 @@ const ChannelCarousel = () => {
                 </div>
 
                 {/* Border Glow Effect */}
-                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-quebec-orange/50 transition-colors duration-300" />
+                <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-xmas-red/50 transition-colors duration-300" />
               </div>
             ))}
           </div>
@@ -225,13 +228,13 @@ const ChannelCarousel = () => {
               ].map((stat, index) => (
                 <div
                   key={index}
-                  className="text-center p-4 rounded-xl glass border border-border/30"
+                  className="text-center p-4 rounded-xl card-dark border-xmas-green/30 hover:border-xmas-red/40 transition-all"
                 >
                   <div className="text-2xl mb-1">{stat.emoji}</div>
-                  <div className="text-2xl md:text-3xl font-display font-black text-quebec-orange">
+                  <div className="text-2xl md:text-3xl font-display font-black text-gradient-xmas">
                     {stat.value}
                   </div>
-                  <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
+                  <div className="text-xs text-muted-foreground mt-1 font-body">{stat.label}</div>
                 </div>
               ))}
             </div>
