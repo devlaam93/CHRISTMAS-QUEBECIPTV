@@ -15,43 +15,43 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: Tv,
-      title: '15,000+ Live Channels',
-      description: 'Access thousands of live TV channels from around the world in HD and 4K quality.'
+      title: '15 000+ Chaînes en Direct',
+      description: "Accédez à des milliers de chaînes TV du monde entier en qualité HD et 4K."
     },
     {
       icon: Film,
-      title: '60,000+ VOD Content',
-      description: 'Massive library of movies, series, and exclusive content at your fingertips.'
+      title: '60 000+ Contenu VOD',
+      description: "Bibliothèque massive de films, séries et contenu exclusif à portée de main."
     },
     {
       icon: Zap,
-      title: 'Anti-Freeze™ Technology',
-      description: 'Our proprietary 9.8 technology ensures smooth, buffer-free streaming experience.'
+      title: 'Technologie Anti-Gel™',
+      description: "Notre technologie 9.8 assure une expérience de streaming fluide et sans tampon."
     },
     {
       icon: Shield,
-      title: 'Privacy & VPN Protection',
-      description: 'Built-in VPN protection keeps your streaming activity private and secure.'
+      title: 'Protection VPN & Vie Privée',
+      description: "Protection VPN intégrée pour garder votre activité de streaming privée et sécurisée."
     },
     {
       icon: Globe,
-      title: 'Multi-Device Support',
-      description: 'Watch on any device - Smart TV, phone, tablet, or computer simultaneously.'
+      title: 'Support Multi-Appareils',
+      description: "Regardez sur n'importe quel appareil - Smart TV, téléphone, tablette ou ordinateur simultanément."
     },
     {
       icon: Headphones,
-      title: '24/7 Support',
-      description: 'Round-the-clock customer support via live chat to assist you anytime.'
+      title: 'Support 24/7',
+      description: "Service client disponible 24h/24 via chat en direct pour vous assister à tout moment."
     },
     {
       icon: Clock,
-      title: 'Catch-up & EPG',
-      description: 'Never miss a show with catch-up TV and full electronic program guide.'
+      title: 'Rattrapage & EPG',
+      description: "Ne manquez jamais une émission avec le rattrapage TV et le guide électronique complet."
     },
     {
       icon: Smartphone,
-      title: 'Free Apps Included',
-      description: 'Hotiptv and Ibo player apps included free with your subscription.'
+      title: 'Applications Gratuites Incluses',
+      description: "Applications Hotiptv et Ibo player incluses gratuitement avec votre abonnement."
     },
   ];
 
@@ -59,18 +59,18 @@ const FeaturesSection = () => {
     <section id="features" className="py-20 md:py-32 relative">
       {/* Decorative elements */}
       <div className="absolute top-10 right-20 text-3xl opacity-20 animate-float">⭐</div>
-      <div className="absolute bottom-10 left-20 text-3xl opacity-20 animate-float" style={{ animationDelay: '-2s' }}>❄️</div>
+      <div className="absolute bottom-10 left-20 text-3xl opacity-20 animate-float" style={{ animationDelay: '-2s' }}>🍁</div>
       
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <ScrollReveal animation="fade-up" duration={700}>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-black mb-6">
-              Why Choose <span className="text-christmas-gold">MODEIPTV?</span>
+              Pourquoi Choisir <span className="text-quebec-orange">Quebec IPTV?</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              🎅 We're the top IPTV provider in Canada, offering reliable streaming with high-quality video 
-              that brings your favorite entertainment to life.
+              🍁 Nous sommes le meilleur fournisseur IPTV au Canada, offrant un streaming fiable avec une vidéo de haute qualité 
+              qui donne vie à votre divertissement préféré.
             </p>
           </div>
         </ScrollReveal>
@@ -80,7 +80,7 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <ScrollReveal 
               key={index} 
-              animation={index % 2 === 0 ? 'fade-up' : 'fade-up'}
+              animation="fade-up"
               delay={index * 75}
               duration={500}
             >

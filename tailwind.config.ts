@@ -51,15 +51,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        christmas: {
-          red: "hsl(var(--christmas-red))",
-          "red-dark": "hsl(var(--christmas-red-dark))",
-          green: "hsl(var(--christmas-green))",
-          "green-light": "hsl(var(--christmas-green-light))",
-          gold: "hsl(var(--christmas-gold))",
-          "gold-light": "hsl(var(--christmas-gold-light))",
-          cream: "hsl(var(--christmas-cream))",
-          snow: "hsl(var(--christmas-snow))",
+        quebec: {
+          orange: "hsl(var(--quebec-orange))",
+          "orange-dark": "hsl(var(--quebec-orange-dark))",
+          "orange-light": "hsl(var(--quebec-orange-light))",
+          gold: "hsl(var(--quebec-gold))",
+          "gold-light": "hsl(var(--quebec-gold-light))",
+          cream: "hsl(var(--quebec-cream))",
+          snow: "hsl(var(--quebec-snow))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -88,15 +87,15 @@ export default {
         },
         "glow-pulse": {
           "0%, 100%": { 
-            boxShadow: "0 0 20px hsl(var(--christmas-red) / 0.5), 0 0 40px hsl(var(--christmas-red) / 0.3)" 
+            boxShadow: "0 0 20px hsl(var(--quebec-orange) / 0.5), 0 0 40px hsl(var(--quebec-orange) / 0.3)" 
           },
           "50%": { 
-            boxShadow: "0 0 40px hsl(var(--christmas-red) / 0.7), 0 0 80px hsl(var(--christmas-red) / 0.5)" 
+            boxShadow: "0 0 40px hsl(var(--quebec-orange) / 0.7), 0 0 80px hsl(var(--quebec-orange) / 0.5)" 
           },
         },
         "border-glow": {
-          "0%, 100%": { borderColor: "hsl(var(--christmas-red))" },
-          "50%": { borderColor: "hsl(var(--christmas-green))" },
+          "0%, 100%": { borderColor: "hsl(var(--quebec-orange))" },
+          "50%": { borderColor: "hsl(var(--quebec-gold))" },
         },
         "scale-in": {
           "0%": { transform: "scale(0.9)", opacity: "0" },
