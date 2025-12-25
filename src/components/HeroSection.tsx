@@ -1,14 +1,22 @@
 import { Gift, ArrowRight, Sparkles, TreePine, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import CountdownTimer from './CountdownTimer';
+import heroBanner from '@/assets/christmas-hero-banner.jpg';
 
 const HeroSection = () => {
   const targetDate = new Date('2026-01-01T00:00:00');
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-36 pb-20">
-      {/* Dark Festive Background */}
-      <div className="absolute inset-0 bg-background" />
+      {/* Christmas Hero Banner Background */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroBanner} 
+          alt="Christmas decorations" 
+          className="w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+      </div>
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-xmas-red/10 rounded-full blur-[150px]" />
         <div className="absolute bottom-20 right-1/4 w-[400px] h-[400px] bg-xmas-green/10 rounded-full blur-[150px]" />
