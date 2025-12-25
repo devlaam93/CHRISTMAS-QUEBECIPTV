@@ -16,11 +16,11 @@ const FAQSection = () => {
       <div className="container mx-auto px-4">
         <ScrollReveal animation="fade-up" duration={700}>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block px-4 py-2 rounded-full glass-card text-sm font-medium text-xmas-gold mb-4 font-body">
+            <span className="inline-block px-4 py-2 rounded-lg card-dark text-sm font-medium text-fire-amber mb-4 font-body border-fire-amber/30">
               ❓ FAQ
             </span>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-              Questions <span className="text-gradient-gold">Fréquentes</span>
+              Questions <span className="text-gradient-amber">Fréquentes</span>
             </h2>
           </div>
         </ScrollReveal>
@@ -31,9 +31,9 @@ const FAQSection = () => {
               <ScrollReveal key={index} animation="fade-up" delay={index * 100} duration={500}>
                 <AccordionItem 
                   value={`item-${index}`}
-                  className="glass-card px-6 border-none data-[state=open]:ring-2 data-[state=open]:ring-xmas-red/30 transition-all"
+                  className="card-dark px-6 border-none data-[state=open]:ring-1 data-[state=open]:ring-fire-orange/30 transition-all"
                 >
-                  <AccordionTrigger className="text-left font-display font-semibold hover:text-xmas-red transition-colors py-5 text-base">
+                  <AccordionTrigger className="text-left font-display font-semibold hover:text-fire-orange transition-colors py-5 text-base">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pb-5 font-body text-sm leading-relaxed">

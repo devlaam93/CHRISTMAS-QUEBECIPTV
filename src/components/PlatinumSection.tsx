@@ -16,15 +16,17 @@ const PlatinumSection = () => {
 
   return (
     <section id="platinum" className="py-24 relative">
-      <div className="container mx-auto px-4">
+      <div className="absolute inset-0 bg-gradient-to-b from-fire-orange/5 via-transparent to-fire-orange/5" />
+      
+      <div className="container mx-auto px-4 relative">
         <ScrollReveal animation="fade-up" duration={700}>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full mb-6">
-              <Crown className="w-4 h-4 text-xmas-gold" />
-              <span className="text-sm font-medium text-xmas-gold font-body">Collection Platinum</span>
+            <div className="inline-flex items-center gap-2 card-dark px-4 py-2 rounded-lg mb-6 border-fire-amber/30">
+              <Crown className="w-4 h-4 text-fire-amber" />
+              <span className="text-sm font-medium text-fire-amber font-body">Collection Platinum</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4">
-              Expérience <span className="text-gradient-gold">Platinum</span>
+              Expérience <span className="text-gradient-amber">Platinum</span>
             </h2>
             <p className="text-muted-foreground font-body">
               Notre offre la plus complète pour un divertissement sans limites
@@ -35,18 +37,18 @@ const PlatinumSection = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-16">
           {plans.map((plan, index) => (
             <ScrollReveal key={plan.duration} animation="fade-up" delay={index * 100}>
-              <div className={`relative glass-card p-8 ${plan.popular ? 'ring-2 ring-xmas-gold/50' : ''}`}>
+              <div className={`relative card-dark p-8 ${plan.popular ? 'ring-2 ring-fire-amber/50 glow-amber' : ''}`}>
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 btn-gradient-gold text-white px-4 py-1 rounded-full text-xs font-semibold font-body">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-amber text-background px-4 py-1 rounded-lg text-xs font-semibold font-body">
                     ⭐ MEILLEURE VALEUR
                   </div>
                 )}
                 
                 <div className="text-center">
-                  <div className="w-14 h-14 rounded-2xl btn-gradient-gold flex items-center justify-center mx-auto mb-4">
-                    <Crown className="w-7 h-7 text-white" />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-amber flex items-center justify-center mx-auto mb-4">
+                    <Crown className="w-7 h-7 text-background" />
                   </div>
-                  <div className="text-5xl font-display font-bold text-gradient-gold mb-1">{plan.duration}</div>
+                  <div className="text-5xl font-display font-bold text-gradient-amber mb-1">{plan.duration}</div>
                   <div className="text-muted-foreground font-body mb-6">{plan.unit}</div>
                   
                   <div className="mb-6">
@@ -54,11 +56,11 @@ const PlatinumSection = () => {
                       <span className="text-4xl font-display font-bold text-foreground">${plan.price}</span>
                       <span className="text-muted-foreground line-through font-body mb-1">${plan.originalPrice}</span>
                     </div>
-                    <p className="text-xmas-green text-sm font-body mt-2">${plan.perMonth}/mois + 1 MOIS GRATUIT</p>
+                    <p className="text-fire-amber text-sm font-body mt-2">${plan.perMonth}/mois + 1 MOIS GRATUIT</p>
                   </div>
                   
                   <a href={plan.link} target="_blank" rel="noopener noreferrer">
-                    <Button className={`w-full rounded-full font-body text-base py-6 group ${plan.popular ? 'btn-gradient-gold' : 'btn-gradient-green'} hover:opacity-90`}>
+                    <Button className={`w-full rounded-lg font-body text-base py-6 group ${plan.popular ? 'btn-fire' : 'bg-muted hover:bg-muted/80 text-foreground'}`}>
                       Commander
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -70,14 +72,14 @@ const PlatinumSection = () => {
         </div>
 
         <ScrollReveal animation="fade-up" delay={200}>
-          <div className="glass-card p-8 max-w-3xl mx-auto">
-            <h3 className="text-xl font-display font-bold text-center mb-8 text-gradient-gold">
-              🎁 Tout Inclus dans Platinum
+          <div className="card-dark p-8 max-w-3xl mx-auto">
+            <h3 className="text-xl font-display font-bold text-center mb-8 text-gradient-fire">
+              🔥 Tout Inclus dans Platinum
             </h3>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
               {allFeatures.map((feature, index) => (
-                <div key={index} className="flex items-center gap-3 p-3 rounded-xl bg-muted/30">
-                  <Check className="w-4 h-4 text-xmas-green flex-shrink-0" />
+                <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-muted/30">
+                  <Check className="w-4 h-4 text-fire-orange flex-shrink-0" />
                   <span className="text-muted-foreground text-sm font-body">{feature}</span>
                 </div>
               ))}
