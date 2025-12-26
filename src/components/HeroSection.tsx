@@ -52,7 +52,7 @@ const HeroSection = () => {
           <div className="my-10 animate-scale-in" style={{ animationDelay: '0.2s' }}>
             <div className="inline-flex items-center gap-4 card-dark border-xmas-green/40 px-8 py-6 rounded-3xl glow-gold">
               <Star className="w-10 h-10 text-xmas-gold animate-twinkle" />
-              <span className="text-6xl md:text-8xl font-display font-bold text-gradient-xmas">80%</span>
+              <span className="text-6xl md:text-8xl font-display font-bold text-gradient-xmas">60%</span>
               <div className="text-left border-l-2 border-xmas-green/40 pl-4 ml-2">
                 <div className="text-xmas-green font-display text-2xl md:text-3xl font-bold">RABAIS</div>
                 <div className="text-muted-foreground text-sm font-body flex items-center gap-1">
