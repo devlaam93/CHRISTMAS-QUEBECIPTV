@@ -6,7 +6,7 @@ import paymentBadges from '@/assets/payment-badges.webp';
 const PricingSection = () => {
   const features = [
     { name: 'Chaînes en Direct', standard: '15 000+', premium: '30 000+', icon: Tv },
-    { name: 'Films & Séries (VOD)', standard: '60K+', premium: '120K+', icon: Film },
+    { name: 'Films & Séries (VOD)', standard: '120K+', premium: '120K+', icon: Film },
     { name: 'Application Hotiptv', standard: true, premium: true },
     { name: 'Application Ibo Player', standard: true, premium: true },
     { name: 'Activation Instantanée', standard: true, premium: true },
