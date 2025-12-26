@@ -47,22 +47,63 @@ const PlatinumExclusiveSection = () => {
   const leftFeatures = features.slice(0, 6);
   const rightFeatures = features.slice(6, 12);
 
+  // Fixed positions for dots to avoid hydration issues
+  const dots = [
+    { top: 5, left: 3, size: 'sm', delay: 0 },
+    { top: 12, left: 92, size: 'md', delay: 0.5 },
+    { top: 18, left: 15, size: 'sm', delay: 1 },
+    { top: 25, left: 88, size: 'lg', delay: 1.5 },
+    { top: 32, left: 8, size: 'md', delay: 2 },
+    { top: 38, left: 95, size: 'sm', delay: 0.3 },
+    { top: 45, left: 2, size: 'lg', delay: 0.8 },
+    { top: 52, left: 90, size: 'sm', delay: 1.3 },
+    { top: 58, left: 12, size: 'md', delay: 1.8 },
+    { top: 65, left: 85, size: 'sm', delay: 0.2 },
+    { top: 72, left: 5, size: 'sm', delay: 0.7 },
+    { top: 78, left: 93, size: 'lg', delay: 1.2 },
+    { top: 85, left: 10, size: 'md', delay: 1.7 },
+    { top: 92, left: 88, size: 'sm', delay: 0.4 },
+    { top: 8, left: 45, size: 'sm', delay: 0.9 },
+    { top: 88, left: 50, size: 'md', delay: 1.4 },
+    { top: 20, left: 75, size: 'sm', delay: 1.9 },
+    { top: 75, left: 25, size: 'lg', delay: 0.1 },
+    { top: 40, left: 98, size: 'sm', delay: 0.6 },
+    { top: 60, left: 1, size: 'md', delay: 1.1 },
+  ];
+
   return (
     <section id="platinum" className="py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background" />
       
-      {/* Floating dots decoration */}
-      {[...Array(20)].map((_, i) => (
+      {/* Floating animated dots */}
+      {dots.map((dot, i) => (
         <div
           key={i}
-          className="absolute w-1.5 h-1.5 rounded-full bg-xmas-gold/30"
+          className={`absolute rounded-full ${
+            dot.size === 'sm' ? 'w-1 h-1' : dot.size === 'md' ? 'w-1.5 h-1.5' : 'w-2 h-2'
+          } ${i % 3 === 0 ? 'bg-xmas-gold/40' : i % 3 === 1 ? 'bg-xmas-gold/25' : 'bg-white/20'}`}
           style={{
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
+            top: `${dot.top}%`,
+            left: `${dot.left}%`,
+            animation: `floatDot ${3 + (i % 3)}s ease-in-out infinite`,
+            animationDelay: `${dot.delay}s`,
           }}
         />
       ))}
+      
+      <style>{`
+        @keyframes floatDot {
+          0%, 100% {
+            transform: translateY(0px) scale(1);
+            opacity: 0.4;
+          }
+          50% {
+            transform: translateY(-10px) scale(1.2);
+            opacity: 0.8;
+          }
+        }
+      `}</style>
       
       <div className="container mx-auto px-4 relative">
         {/* Header */}
