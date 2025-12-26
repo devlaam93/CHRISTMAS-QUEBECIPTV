@@ -1,4 +1,4 @@
-import { Menu, X, Gift, TreePine } from 'lucide-react';
+import { Menu, X, Gift, TreePine, Home, Tag, Gem, Sparkles, HelpCircle, MessageCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/quebec-iptv-logo.png';
@@ -14,12 +14,12 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { label: 'Accueil', href: '#' },
-    { label: 'Forfaits', href: '#pricing' },
-    { label: 'Platinum', href: '#platinum' },
-    { label: 'Avantages', href: '#features' },
-    { label: 'FAQ', href: '#faq' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Accueil', href: '#', icon: Home },
+    { label: 'Forfaits', href: '#pricing', icon: Tag },
+    { label: 'Platinum', href: '#platinum', icon: Gem },
+    { label: 'Avantages', href: '#features', icon: Sparkles },
+    { label: 'FAQ', href: '#faq', icon: HelpCircle },
+    { label: 'Contact', href: '#contact', icon: MessageCircle },
   ];
 
   return (
@@ -46,13 +46,14 @@ const Header = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className={`text-sm font-semibold transition-colors font-body ${
+                  className={`text-sm font-semibold transition-colors font-body flex items-center gap-1.5 ${
                     link.label === 'Platinum' 
-                      ? 'bg-gradient-to-r from-purple-400 via-pink-400 to-xmas-gold bg-clip-text text-transparent hover:from-purple-300 hover:via-pink-300 hover:to-xmas-gold animate-pulse' 
+                      ? 'bg-gradient-to-r from-purple-400 via-pink-400 to-xmas-gold bg-clip-text text-transparent hover:from-purple-300 hover:via-pink-300 hover:to-xmas-gold' 
                       : 'text-muted-foreground hover:text-xmas-red'
                   }`}
                 >
-                  {link.label === 'Platinum' ? '💎 ' + link.label : link.label}
+                  <link.icon className={`w-4 h-4 ${link.label === 'Platinum' ? 'text-purple-400' : ''}`} />
+                  {link.label}
                 </a>
               ))}
             </nav>
@@ -85,14 +86,15 @@ const Header = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className={`text-sm font-semibold transition-colors py-2 font-body ${
+                  className={`text-sm font-semibold transition-colors py-2 font-body flex items-center gap-2 ${
                     link.label === 'Platinum' 
                       ? 'bg-gradient-to-r from-purple-400 via-pink-400 to-xmas-gold bg-clip-text text-transparent' 
                       : 'text-muted-foreground hover:text-xmas-red'
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {link.label === 'Platinum' ? '💎 ' + link.label : link.label}
+                  <link.icon className={`w-4 h-4 ${link.label === 'Platinum' ? 'text-purple-400' : ''}`} />
+                  {link.label}
                 </a>
               ))}
               <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer">
