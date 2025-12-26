@@ -13,7 +13,7 @@ const PlatinumSection = () => {
       originalPrice: '119.99', 
       perMonth: '3.33',
       icon: Zap,
-      link: 'https://order.quebeciptv.ca/step/checkout-12-months-iptv-subscriptions-2/',
+      link: 'https://quebeciptv.ca/step/checkout-12-months-iptv-subscriptions-2/',
       features: ['15 000+ Chaînes', '60K+ Films & Séries', 'Qualité 4K/FHD/HD', 'Netflix, Prime, Disney+', 'Apps Gratuites', 'Support 24/7']
     },
     { 
@@ -26,7 +26,7 @@ const PlatinumSection = () => {
       perMonth: '5.00', 
       popular: true,
       icon: Crown,
-      link: 'https://order.quebeciptv.ca/step/checkout-12-months-iptv-premium-subscriptions-2/',
+      link: 'https://quebeciptv.ca/step/checkout-12-months-iptv-premium-subscriptions-2/',
       features: ['30 000+ Chaînes', '120K+ Films & Séries', 'Qualité 8K/4K/UHD', 'Netflix, Prime, Disney+', 'Protection VPN', 'Support Prioritaire']
     },
   ];
