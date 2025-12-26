@@ -6,7 +6,7 @@ const PlatinumExclusiveSection = () => {
   const features = [
     '🇨🇦 & 🇺🇸 Contenu Exclusif',
     '+130K Films & Séries',
-    'Netflix, Prime, Disney+',
+    'Netflix, Prime, Disney+ et plus',
     'Apps Hotiptv & Ibo Gratuites',
     'Protection VPN',
     'Activation Instantanée',
