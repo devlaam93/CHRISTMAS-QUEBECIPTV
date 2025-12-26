@@ -39,7 +39,7 @@ const PlatinumExclusiveSection = () => {
       originalPrice: '199.99',
       perMonth: '7.50',
       featured: true,
-      link: 'https://order.quebeciptv.ca/step/checkout-12-months-iptv-platinum-subscriptions/',
+      link: 'https://quebeciptv.ca/step/checkout-12-months-iptv-platinum-subscriptions/',
     },
   ];
 
