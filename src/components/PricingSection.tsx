@@ -149,7 +149,7 @@ const PricingSection = () => {
                       <div className="flex items-end gap-2 mb-4">
                         <span className="text-3xl font-display font-bold text-foreground">${option.price}</span>
                         <span className="text-muted-foreground line-through text-sm font-body mb-1">${option.originalPrice}</span>
-                        <span className="text-xmas-gold text-xs font-bold font-body mb-1 ml-auto">🎁 +1 MOIS GRATUIT</span>
+                        <span className="text-xmas-gold text-xs font-bold font-body mb-1 ml-auto">-{option.discount}</span>
                       </div>
                       <a href={option.link} target="_blank" rel="noopener noreferrer">
                         <Button className={`w-full rounded-full font-body group ${option.popular ? 'btn-xmas' : 'btn-green'}`}>

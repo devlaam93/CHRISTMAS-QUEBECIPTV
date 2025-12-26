@@ -28,7 +28,7 @@ const Header = () => {
       <div className={`bg-gradient-xmas overflow-hidden transition-all duration-300 ${scrolled ? 'max-h-0 opacity-0' : 'max-h-12 opacity-100'}`}>
         <p className="py-2.5 text-xs md:text-sm font-bold text-white flex items-center justify-center gap-2 font-body">
           <Gift className="w-4 h-4 animate-bounce-slow" />
-          🎄 OFFRE DE NOËL — 80% RABAIS + 1 Mois GRATUIT 🎁
+          🎄 OFFRE DE NOËL — 80% RABAIS 🎁
           <TreePine className="w-4 h-4 animate-sway" />
         </p>
       </div>

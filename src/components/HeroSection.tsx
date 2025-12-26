@@ -65,8 +65,6 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-base md:text-lg text-muted-foreground mb-10 max-w-xl mx-auto font-body animate-slide-up leading-relaxed" style={{ animationDelay: '0.3s' }}>
-            <span className="text-xmas-red font-bold">🎁 +1 Mois Gratuit</span> avec tout abonnement!
-            <br />
             Streaming 4K Premium • 30 000+ Chaînes • Canada
           </p>
 
