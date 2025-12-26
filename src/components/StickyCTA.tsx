@@ -1,4 +1,4 @@
-import { Gift } from 'lucide-react';
+import { Crown, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
 
@@ -62,25 +62,27 @@ const StickyCTA = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 p-4 bg-gradient-to-t from-background via-background to-transparent lg:hidden">
       <div className="flex items-center justify-center gap-2 mb-2">
-        <span className="text-xs text-xmas-gold font-bold font-body animate-pulse">⏰ Offre expire dans:</span>
+        <span className="text-xs text-xmas-gold font-bold font-body animate-pulse flex items-center gap-1">
+          <Zap className="w-3 h-3" /> Offre Platinum expire dans:
+        </span>
         <div className="flex items-center gap-1">
-          <span className="bg-xmas-red/20 text-xmas-red px-2 py-0.5 rounded text-xs font-bold font-body">
+          <span className="bg-xmas-gold/20 text-xmas-gold px-2 py-0.5 rounded text-xs font-bold font-body">
             {String(timeLeft.hours).padStart(2, '0')}h
           </span>
           <span className="text-xmas-gold">:</span>
-          <span className="bg-xmas-green/20 text-xmas-green px-2 py-0.5 rounded text-xs font-bold font-body">
+          <span className="bg-xmas-gold/20 text-xmas-gold px-2 py-0.5 rounded text-xs font-bold font-body">
             {String(timeLeft.minutes).padStart(2, '0')}m
           </span>
           <span className="text-xmas-gold">:</span>
-          <span className="bg-xmas-red/20 text-xmas-red px-2 py-0.5 rounded text-xs font-bold font-body">
+          <span className="bg-xmas-gold/20 text-xmas-gold px-2 py-0.5 rounded text-xs font-bold font-body">
             {String(timeLeft.seconds).padStart(2, '0')}s
           </span>
         </div>
       </div>
       <a href="#platinum">
-        <Button className="w-full btn-xmas rounded-full py-6 text-base font-body shadow-2xl group">
-          <Gift className="w-5 h-5 mr-2 animate-bounce-slow" />
-          🎄 Commander - 60% Rabais
+        <Button className="w-full bg-gradient-to-r from-xmas-gold via-yellow-500 to-xmas-gold text-background rounded-full py-6 text-base font-body shadow-2xl group hover:shadow-[0_0_30px_hsl(var(--xmas-gold)/0.6)] transition-all duration-300">
+          <Crown className="w-5 h-5 mr-2 animate-bounce-slow" />
+          👑 Platinum - 30,000+ Chaînes | 60% OFF
         </Button>
       </a>
     </div>
