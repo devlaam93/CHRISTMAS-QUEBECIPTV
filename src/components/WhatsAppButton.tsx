@@ -16,7 +16,7 @@ const WhatsAppButton = () => {
         <TooltipTrigger asChild>
           <button
             onClick={handleClick}
-            className="fixed bottom-6 right-6 z-50 group"
+            className="fixed bottom-28 right-4 z-50 group lg:bottom-6 lg:right-6"
             aria-label="Contactez-nous sur WhatsApp"
           >
             {/* Pulse ring animation */}
