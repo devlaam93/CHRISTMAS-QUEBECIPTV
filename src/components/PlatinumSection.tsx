@@ -77,7 +77,7 @@ const PlatinumSection = () => {
                       <span className="line-through">${plan.originalPrice}</span>
                       <span className="text-xmas-gold font-bold ml-2">-80%</span>
                     </p>
-                    <p className="text-xmas-gold text-sm font-bold font-body mt-2">${plan.perMonth}/mois + 🎁 1 MOIS GRATUIT</p>
+                    <p className="text-xmas-gold text-sm font-bold font-body mt-2">${plan.perMonth}/mois</p>
                   </div>
 
                   {/* Features */}
