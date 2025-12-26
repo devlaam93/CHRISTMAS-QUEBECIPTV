@@ -20,17 +20,6 @@ const PlatinumExclusiveSection = () => {
 
   const plans = [
     {
-      name: 'STARTER',
-      duration: '6',
-      durationLabel: 'Mois',
-      subtitle: 'Serveur Platinum',
-      price: '69.99',
-      originalPrice: '139.99',
-      perMonth: '11.67',
-      featured: false,
-      link: 'https://order.quebeciptv.ca/step/checkout-6-months-iptv-platinum-subscriptions/',
-    },
-    {
       name: 'BEST VALUE',
       duration: '12',
       durationLabel: 'Mois',
@@ -147,7 +136,7 @@ const PlatinumExclusiveSection = () => {
 
         {/* Pricing Cards */}
         <ScrollReveal animation="fade-up" delay={150}>
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="max-w-lg mx-auto">
             {plans.map((plan) => (
               <div
                 key={plan.name}
