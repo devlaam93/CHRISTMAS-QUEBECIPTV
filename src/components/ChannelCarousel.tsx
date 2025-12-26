@@ -43,7 +43,7 @@ const channels = [
   {
     name: 'Films',
     image: moviesImg,
-    count: '60K+',
+    count: '120K+',
     description: 'Derniers blockbusters & classiques',
     features: ['4K HDR', 'Nouveautés', 'Gagnants Oscar'],
   },
@@ -222,7 +222,7 @@ const ChannelCarousel = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {[
                 { value: '30 000+', label: 'Chaînes en Direct', emoji: '📺' },
-                { value: '60 000+', label: 'Films & Séries', emoji: '🎬' },
+                { value: '120 000+', label: 'Films & Séries', emoji: '🎬' },
                 { value: '4K', label: 'Qualité Ultra HD', emoji: '✨' },
                 { value: '99.9%', label: 'Disponibilité', emoji: '⚡' },
               ].map((stat, index) => (

@@ -5,7 +5,7 @@ import ScrollReveal from './ScrollReveal';
 const FeaturesSection = () => {
   const features = [
     { icon: Tv, title: '30 000+ Chaînes en Direct', description: "Accédez à des milliers de chaînes TV du monde entier en qualité HD et 4K." },
-    { icon: Film, title: '60 000+ Contenu VOD', description: "Bibliothèque massive de films, séries et contenu exclusif à portée de main." },
+    { icon: Film, title: '120 000+ Contenu VOD', description: "Bibliothèque massive de films, séries et contenu exclusif à portée de main." },
     { icon: Zap, title: 'Technologie Anti-Gel™', description: "Notre technologie 9.8 assure une expérience de streaming fluide et sans tampon." },
     { icon: Shield, title: 'Protection VPN & Vie Privée', description: "Protection VPN intégrée pour garder votre activité de streaming privée." },
     { icon: Globe, title: 'Support Multi-Appareils', description: "Regardez sur Smart TV, téléphone, tablette ou ordinateur simultanément." },
