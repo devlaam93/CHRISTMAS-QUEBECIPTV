@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import {
   Tooltip,
   TooltipContent,
@@ -6,6 +7,42 @@ import {
 } from "@/components/ui/tooltip";
 
 const WhatsAppButton = () => {
+  const [isVisibleOnMobile, setIsVisibleOnMobile] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      
+      // Get the pricing and platinum sections
+      const pricingSection = document.getElementById('pricing');
+      const platinumSection = document.getElementById('platinum');
+      
+      // Check if currently viewing pricing or platinum sections
+      let isInHiddenSection = false;
+      
+      if (pricingSection) {
+        const pricingRect = pricingSection.getBoundingClientRect();
+        if (pricingRect.top <= window.innerHeight && pricingRect.bottom >= 0) {
+          isInHiddenSection = true;
+        }
+      }
+      
+      if (platinumSection) {
+        const platinumRect = platinumSection.getBoundingClientRect();
+        if (platinumRect.top <= window.innerHeight && platinumRect.bottom >= 0) {
+          isInHiddenSection = true;
+        }
+      }
+      
+      // Show if scrolled past 500px AND not in hidden sections
+      setIsVisibleOnMobile(scrollY > 500 && !isInHiddenSection);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleClick = () => {
     window.open('https://api.whatsapp.com/send/?phone=14508040166&text&type=phone_number&app_absent=0', '_blank');
   };
@@ -16,7 +53,9 @@ const WhatsAppButton = () => {
         <TooltipTrigger asChild>
           <button
             onClick={handleClick}
-            className="fixed bottom-28 right-4 z-50 group lg:bottom-6 lg:right-6"
+            className={`fixed bottom-28 right-4 z-50 group lg:bottom-6 lg:right-6 transition-opacity duration-300 ${
+              isVisibleOnMobile ? 'opacity-100' : 'opacity-0 pointer-events-none lg:opacity-100 lg:pointer-events-auto'
+            }`}
             aria-label="Contactez-nous sur WhatsApp"
           >
             {/* Pulse ring animation */}
