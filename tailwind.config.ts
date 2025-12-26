@@ -96,12 +96,21 @@ export default {
           "0%": { transform: "translateY(20px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
+        "pulse-glow": {
+          "0%, 100%": { 
+            boxShadow: "0 8px 32px hsl(45 93% 47% / 0.4), 0 0 20px hsl(45 93% 47% / 0.2)" 
+          },
+          "50%": { 
+            boxShadow: "0 8px 40px hsl(45 93% 47% / 0.6), 0 0 30px hsl(45 93% 47% / 0.4)" 
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "scale-in": "scale-in 0.5s ease-out forwards",
         "slide-up": "slide-up 0.5s ease-out forwards",
+        "pulse-glow": "pulse-glow 2s ease-in-out infinite",
       },
     },
   },
