@@ -103,6 +103,19 @@ const PlatinumExclusiveSection = () => {
             opacity: 0.8;
           }
         }
+        @keyframes pulseGlow {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.4), 0 0 40px rgba(220, 38, 38, 0.2), inset 0 0 20px rgba(220, 38, 38, 0.1);
+            border-color: rgba(220, 38, 38, 0.8);
+          }
+          50% {
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.6), 0 0 60px rgba(220, 38, 38, 0.3), 0 0 80px rgba(220, 38, 38, 0.15), inset 0 0 30px rgba(220, 38, 38, 0.15);
+            border-color: rgba(220, 38, 38, 1);
+          }
+        }
+        .pulse-glow-border {
+          animation: pulseGlow 2s ease-in-out infinite;
+        }
       `}</style>
       
       <div className="container mx-auto px-4 relative">
@@ -140,7 +153,7 @@ const PlatinumExclusiveSection = () => {
                 key={plan.name}
                 className={`relative rounded-2xl p-6 md:p-8 ${
                   plan.featured
-                    ? 'bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] border-2 border-xmas-red shadow-[0_0_30px_rgba(220,38,38,0.2)]'
+                    ? 'bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] border-2 border-xmas-red pulse-glow-border'
                     : 'bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] border border-[#333]'
                 }`}
               >
