@@ -3,8 +3,7 @@ const WhatsAppButton = () => {
   const message = "Bonjour! Je suis intéressé par un abonnement Quebec IPTV.";
   
   const handleClick = () => {
-    const url = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    window.open('https://api.whatsapp.com/send/?phone=14508040166&text&type=phone_number&app_absent=0', '_blank');
   };
 
   return (

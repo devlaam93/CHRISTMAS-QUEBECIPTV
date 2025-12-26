@@ -39,7 +39,7 @@ const Footer = () => {
                 🎄 Vivez un divertissement premium avec le service IPTV le plus fiable au Canada. 
                 Streaming 4K cristallin, des milliers de chaînes, et un support de classe mondiale.
               </p>
-              <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer">
+              <a href="https://api.whatsapp.com/send/?phone=14508040166&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
                 <Button className="gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white border-0 font-body rounded-full">
                   <WhatsAppIcon className="w-5 h-5" />
                   Nous Contacter
@@ -50,7 +50,7 @@ const Footer = () => {
 
           <ScrollReveal animation="fade-up" delay={200} duration={500}>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer" className="group p-5 rounded-2xl bg-muted/30 border border-border/50 hover:border-xmas-green/50 transition-all duration-300">
+              <a href="https://api.whatsapp.com/send/?phone=14508040166&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="group p-5 rounded-2xl bg-muted/30 border border-border/50 hover:border-xmas-green/50 transition-all duration-300">
                 <div className="w-12 h-12 rounded-2xl bg-xmas-green/10 flex items-center justify-center mb-4 group-hover:bg-gradient-green transition-all">
                   <WhatsAppIcon className="w-6 h-6 text-xmas-green group-hover:text-white transition-colors" />
                 </div>
