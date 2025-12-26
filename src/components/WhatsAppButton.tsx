@@ -1,7 +1,4 @@
 const WhatsAppButton = () => {
-  const whatsappNumber = "+14508040166";
-  const message = "Bonjour! Je suis intéressé par un abonnement Quebec IPTV.";
-  
   const handleClick = () => {
     window.open('https://api.whatsapp.com/send/?phone=14508040166&text&type=phone_number&app_absent=0', '_blank');
   };
@@ -9,7 +6,7 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={handleClick}
-      className="fixed bottom-6 right-6 z-50 group"
+      className="fixed top-24 right-6 z-50 group"
       aria-label="Contactez-nous sur WhatsApp"
     >
       {/* Pulse ring animation */}
