@@ -25,7 +25,7 @@ const PlatinumExclusiveSection = () => {
       durationLabel: 'Mois',
       subtitle: 'Serveur Platinum',
       price: '89.99',
-      originalPrice: '199.99',
+      originalPrice: '224.99',
       perMonth: '7.50',
       featured: true,
       link: 'https://quebeciptv.ca/step/checkout-12-months-iptv-platinum-subscriptions/',

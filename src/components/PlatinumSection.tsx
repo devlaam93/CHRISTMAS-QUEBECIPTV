@@ -10,7 +10,7 @@ const PlatinumSection = () => {
       duration: '12', 
       unit: 'Mois', 
       price: '39.99', 
-      originalPrice: '119.99', 
+      originalPrice: '99.99', 
       perMonth: '3.33',
       icon: Zap,
       link: 'https://quebeciptv.ca/step/checkout-12-months-iptv-subscriptions-2/',
@@ -22,7 +22,7 @@ const PlatinumSection = () => {
       duration: '12', 
       unit: 'Mois', 
       price: '59.99', 
-      originalPrice: '179.99', 
+      originalPrice: '149.99', 
       perMonth: '5.00', 
       popular: true,
       icon: Crown,
@@ -40,7 +40,7 @@ const PlatinumSection = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 card-dark border-xmas-red/50 px-5 py-2.5 rounded-full mb-6">
               <Crown className="w-5 h-5 text-xmas-gold" />
-              <span className="text-sm font-bold text-xmas-red font-body">🎁 Offre de Noël - 80% Rabais</span>
+              <span className="text-sm font-bold text-xmas-red font-body">🎁 Offre de Noël - 60% Rabais</span>
               <TreePine className="w-5 h-5 text-xmas-green" />
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4">
@@ -75,7 +75,7 @@ const PlatinumSection = () => {
                     </div>
                     <p className="text-muted-foreground text-sm font-body mt-2">
                       <span className="line-through">${plan.originalPrice}</span>
-                      <span className="text-xmas-gold font-bold ml-2">-80%</span>
+                      <span className="text-xmas-gold font-bold ml-2">-60%</span>
                     </p>
                     <p className="text-xmas-gold text-sm font-bold font-body mt-2">${plan.perMonth}/mois</p>
                   </div>

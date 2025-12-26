@@ -27,8 +27,8 @@ const PricingSection = () => {
       title: 'Standard',
       subtitle: 'Serveur Performance',
       options: [
-        { duration: '12 Mois', price: '39.99', originalPrice: '119', discount: '80%', link: 'https://quebeciptv.ca/step/checkout-12-months-iptv-subscriptions-2/' },
-        { duration: '24 Mois', price: '79.99', originalPrice: '199', discount: '80%', link: 'https://order.quebeciptv.ca/step/checkout-24-month-iptv-subscriptions-2/' },
+        { duration: '12 Mois', price: '39.99', originalPrice: '99.99', discount: '60%', link: 'https://quebeciptv.ca/step/checkout-12-months-iptv-subscriptions-2/' },
+        { duration: '24 Mois', price: '79.99', originalPrice: '199.99', discount: '60%', link: 'https://order.quebeciptv.ca/step/checkout-24-month-iptv-subscriptions-2/' },
       ],
     },
     {
@@ -38,8 +38,8 @@ const PricingSection = () => {
       subtitle: 'Serveur Performance',
       popular: true,
       options: [
-        { duration: '12 Mois', price: '59.99', originalPrice: '179', discount: '80%', link: 'https://quebeciptv.ca/step/checkout-12-months-iptv-premium-subscriptions-2/', popular: true },
-        { duration: '24 Mois', price: '99.99', originalPrice: '259', discount: '80%', link: 'https://order.quebeciptv.ca/step/checkout-24-months-iptv-premium-subscriptions-2/' },
+        { duration: '12 Mois', price: '59.99', originalPrice: '149.99', discount: '60%', link: 'https://quebeciptv.ca/step/checkout-12-months-iptv-premium-subscriptions-2/', popular: true },
+        { duration: '24 Mois', price: '99.99', originalPrice: '249.99', discount: '60%', link: 'https://order.quebeciptv.ca/step/checkout-24-months-iptv-premium-subscriptions-2/' },
       ],
     },
   ];
