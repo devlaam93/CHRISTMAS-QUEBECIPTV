@@ -1,176 +1,187 @@
-import { Check, Gem, ArrowRight, Shield, Zap, Globe, Users, Headphones, Star, Crown, Sparkles } from 'lucide-react';
+import { Check, Crown, Zap, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ScrollReveal from './ScrollReveal';
 
 const PlatinumExclusiveSection = () => {
-  const exclusivePerks = [
-    { icon: Globe, title: '50 000+ Chaînes', subtitle: 'Mondiales' },
-    { icon: Zap, title: '200K+ VOD', subtitle: 'En 8K Ultra' },
-    { icon: Users, title: '5 Écrans', subtitle: 'Simultanés' },
-    { icon: Shield, title: 'VPN Premium', subtitle: 'Inclus' },
-    { icon: Star, title: 'Serveur Dédié', subtitle: 'Haute Vitesse' },
-    { icon: Headphones, title: 'Support VIP', subtitle: '24/7' },
+  const features = [
+    '🇨🇦 & 🇺🇸 Contenu Exclusif',
+    '+130K Films & Séries',
+    'Netflix, Prime, Disney+',
+    'Apps Hotiptv & Ibo Gratuites',
+    'Protection VPN',
+    'Activation Instantanée',
+    '+35,000 Chaînes Live',
+    'Qualité 8K/4K/UHD/FHD',
+    'Toutes Chaînes Sports',
+    'Anti-Freeze™ 9.8 Tech',
+    'Support 24/7',
+    'Remboursement 7 Jours',
   ];
+
+  const plans = [
+    {
+      name: 'STARTER',
+      duration: '6',
+      durationLabel: 'Mois',
+      subtitle: 'Serveur Platinum',
+      price: '69.99',
+      originalPrice: '139.99',
+      perMonth: '11.67',
+      featured: false,
+      link: 'https://order.quebeciptv.ca/step/checkout-6-months-iptv-platinum-subscriptions/',
+    },
+    {
+      name: 'BEST VALUE',
+      duration: '12',
+      durationLabel: 'Mois',
+      subtitle: 'Serveur Platinum',
+      price: '89.99',
+      originalPrice: '199.99',
+      perMonth: '7.50',
+      featured: true,
+      link: 'https://order.quebeciptv.ca/step/checkout-12-months-iptv-platinum-subscriptions/',
+    },
+  ];
+
+  // Split features into two columns
+  const leftFeatures = features.slice(0, 6);
+  const rightFeatures = features.slice(6, 12);
 
   return (
     <section id="platinum" className="py-24 relative overflow-hidden">
-      {/* Luxurious background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/30 via-background to-background" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/5 rounded-full blur-3xl" />
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background" />
       
-      {/* Floating diamonds decoration */}
-      <div className="absolute top-20 left-10 text-purple-500/20 animate-pulse">
-        <Gem className="w-8 h-8" />
-      </div>
-      <div className="absolute top-40 right-20 text-pink-500/20 animate-pulse delay-300">
-        <Sparkles className="w-6 h-6" />
-      </div>
-      <div className="absolute bottom-32 left-1/4 text-purple-500/20 animate-pulse delay-500">
-        <Crown className="w-10 h-10" />
-      </div>
+      {/* Floating dots decoration */}
+      {[...Array(20)].map((_, i) => (
+        <div
+          key={i}
+          className="absolute w-1.5 h-1.5 rounded-full bg-xmas-gold/30"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+          }}
+        />
+      ))}
       
       <div className="container mx-auto px-4 relative">
         {/* Header */}
         <ScrollReveal animation="fade-up" duration={700}>
           <div className="text-center max-w-4xl mx-auto mb-12">
             <div className="inline-flex items-center gap-3 mb-6">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent to-purple-500" />
-              <span className="text-purple-400 font-body text-sm tracking-widest uppercase">Exclusif</span>
-              <div className="h-px w-12 bg-gradient-to-l from-transparent to-purple-500" />
+              <div className="h-px w-8 bg-xmas-gold/50" />
+              <Crown className="w-5 h-5 text-xmas-gold" />
+              <span className="text-xmas-gold font-body text-sm tracking-widest uppercase font-bold">PLATINUM</span>
+              <Crown className="w-5 h-5 text-xmas-gold" />
+              <div className="h-px w-8 bg-xmas-gold/50" />
             </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
-              <span className="bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
-                PLATINUM
-              </span>
+            
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-foreground">
+              Canada & USA Only <span className="inline-block">🇨🇦</span> <span className="inline-block">🇺🇸</span>
             </h2>
-            <p className="text-xl text-muted-foreground font-body">
-              L'abonnement ultime pour une expérience sans compromis
+            
+            <p className="text-muted-foreground font-body text-lg max-w-3xl mx-auto">
+              <span className="text-xmas-gold font-semibold">Disponible uniquement dans notre offre de Noël.</span>{' '}
+              Ce forfait offre une large sélection de chaînes Platinum canadiennes et américaines, avec des fonctionnalités avancées et une qualité de streaming ultra-haute.
+            </p>
+            
+            <p className="text-muted-foreground font-body mt-4 max-w-3xl mx-auto">
+              Inclut des chaînes 4K et même 8K, sports exclusifs, films, séries et une puissante bibliothèque VOD — le tout optimisé pour des performances rapides et stables. Si vous voulez plus d'options, plus de qualité et plus de chaînes Platinum, c'est le choix parfait.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Main card with asymmetric design */}
+        {/* Pricing Cards */}
         <ScrollReveal animation="fade-up" delay={150}>
-          <div className="max-w-5xl mx-auto">
-            <div className="relative">
-              {/* Glow effect behind card */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-purple-600/20 blur-2xl scale-105" />
-              
-              {/* Main card */}
-              <div className="relative rounded-[2rem] bg-gradient-to-br from-purple-950/80 via-background to-pink-950/40 border border-purple-500/30 overflow-hidden">
-                {/* Top accent bar */}
-                <div className="h-1 w-full bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500" />
-                
-                {/* Floating badge */}
-                <div className="absolute -top-0 right-8 md:right-16">
-                  <div className="bg-gradient-to-br from-purple-500 to-pink-500 text-white px-6 py-3 rounded-b-2xl shadow-lg shadow-purple-500/30">
-                    <div className="text-xs font-body opacity-80">ÉCONOMISEZ</div>
-                    <div className="text-2xl font-display font-bold">200$</div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {plans.map((plan) => (
+              <div
+                key={plan.name}
+                className={`relative rounded-2xl p-6 md:p-8 ${
+                  plan.featured
+                    ? 'bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] border-2 border-xmas-red shadow-[0_0_30px_rgba(220,38,38,0.2)]'
+                    : 'bg-gradient-to-b from-[#1a1a1a] to-[#0d0d0d] border border-[#333]'
+                }`}
+              >
+                {/* Featured badge */}
+                {plan.featured && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-xmas-red text-white px-6 py-2 rounded-full text-sm font-bold font-body flex items-center gap-2">
+                    <span>✨</span> BEST VALUE <span>✨</span>
                   </div>
-                </div>
+                )}
 
-                <div className="p-8 md:p-12 lg:p-16">
-                  <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-                    
-                    {/* Left: Perks grid */}
-                    <div className="lg:col-span-3 order-2 lg:order-1">
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        {exclusivePerks.map((perk, index) => (
-                          <div 
-                            key={index}
-                            className="group relative p-4 rounded-2xl bg-purple-500/5 border border-purple-500/10 hover:border-purple-500/30 hover:bg-purple-500/10 transition-all duration-300"
-                          >
-                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                              <perk.icon className="w-5 h-5 text-white" />
-                            </div>
-                            <div className="font-body">
-                              <div className="font-bold text-foreground text-sm">{perk.title}</div>
-                              <div className="text-xs text-purple-400">{perk.subtitle}</div>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                      
-                      {/* Additional features */}
-                      <div className="mt-6 flex flex-wrap gap-3">
-                        {['Netflix', 'Prime', 'Disney+', 'HBO Max', 'Apple TV+'].map((platform, i) => (
-                          <span 
-                            key={i}
-                            className="px-3 py-1.5 rounded-full text-xs font-body bg-purple-500/10 text-purple-300 border border-purple-500/20"
-                          >
-                            ✓ {platform}
-                          </span>
-                        ))}
-                      </div>
+                {/* Plan name for non-featured */}
+                {!plan.featured && (
+                  <div className="text-center mb-6">
+                    <span className="text-muted-foreground font-body text-sm tracking-widest uppercase">{plan.name}</span>
+                  </div>
+                )}
+                {plan.featured && <div className="h-4" />}
+
+                {/* Duration and Price row */}
+                <div className="flex items-end justify-between mb-6">
+                  <div>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-5xl md:text-6xl font-display font-bold text-foreground">{plan.duration}</span>
+                      <span className="text-xl font-body text-muted-foreground">{plan.durationLabel}</span>
                     </div>
-
-                    {/* Right: Pricing */}
-                    <div className="lg:col-span-2 order-1 lg:order-2">
-                      <div className="text-center lg:text-right">
-                        <div className="inline-flex items-center gap-2 bg-purple-500/20 rounded-full px-4 py-1.5 mb-4">
-                          <Gem className="w-4 h-4 text-purple-400" />
-                          <span className="text-xs font-bold text-purple-300 font-body">24 MOIS D'ACCÈS</span>
-                        </div>
-                        
-                        <div className="mb-2">
-                          <span className="text-muted-foreground line-through text-xl font-body">$299.99</span>
-                        </div>
-                        
-                        <div className="text-7xl md:text-8xl font-display font-bold bg-gradient-to-br from-purple-300 via-pink-300 to-purple-300 bg-clip-text text-transparent mb-2">
-                          $99<span className="text-4xl">.99</span>
-                        </div>
-                        
-                        <p className="text-purple-400 font-bold font-body mb-6">
-                          $4.17/mois • 2 mois gratuits inclus
-                        </p>
-
-                        <a 
-                          href="https://order.quebeciptv.ca/step/checkout-24-months-iptv-platinum-subscriptions/" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                        >
-                          <Button className="w-full lg:w-auto px-10 py-7 text-lg rounded-2xl bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 hover:from-purple-700 hover:via-pink-600 hover:to-purple-700 text-white shadow-xl shadow-purple-500/30 group font-body border-0">
-                            <Gem className="w-5 h-5 mr-2" />
-                            Devenir Membre Platinum
-                            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                          </Button>
-                        </a>
-
-                        <div className="flex items-center justify-center lg:justify-end gap-4 mt-4 text-sm text-muted-foreground font-body">
-                          <span className="flex items-center gap-1">
-                            <Check className="w-4 h-4 text-purple-400" />
-                            Garantie 14 jours
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Shield className="w-4 h-4 text-purple-400" />
-                            Paiement sécurisé
-                          </span>
-                        </div>
-                      </div>
+                    <p className="text-muted-foreground font-body text-sm mt-1">{plan.subtitle}</p>
+                  </div>
+                  
+                  <div className="text-right">
+                    <div className="text-muted-foreground line-through font-body text-sm">${plan.originalPrice}</div>
+                    <div className={`text-4xl md:text-5xl font-display font-bold ${plan.featured ? 'text-xmas-gold' : 'text-foreground'}`}>
+                      ${plan.price}
+                    </div>
+                    <div className={`text-sm font-body ${plan.featured ? 'text-xmas-gold' : 'text-xmas-green'}`}>
+                      ${plan.perMonth}/mo
                     </div>
                   </div>
                 </div>
 
-                {/* Bottom testimonial strip */}
-                <div className="border-t border-purple-500/20 bg-purple-500/5 px-8 md:px-12 py-4">
-                  <div className="flex items-center justify-center gap-2 text-sm font-body text-muted-foreground">
-                    <div className="flex -space-x-2">
-                      {[1, 2, 3, 4, 5].map((i) => (
-                        <div key={i} className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 border-2 border-background" />
-                      ))}
-                    </div>
-                    <span className="ml-2">
-                      <span className="text-purple-400 font-bold">2,500+</span> membres Platinum satisfaits
-                    </span>
-                    <div className="flex text-yellow-400 ml-2">
-                      {'★★★★★'.split('').map((star, i) => (
-                        <span key={i}>{star}</span>
-                      ))}
-                    </div>
+                {/* Features grid */}
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-6">
+                  <div className="space-y-2">
+                    {leftFeatures.map((feature, i) => (
+                      <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground font-body">
+                        <Check className={`w-4 h-4 flex-shrink-0 ${plan.featured ? 'text-xmas-gold' : 'text-xmas-green'}`} />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="space-y-2">
+                    {rightFeatures.map((feature, i) => (
+                      <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground font-body">
+                        <Check className={`w-4 h-4 flex-shrink-0 ${plan.featured ? 'text-xmas-gold' : 'text-xmas-green'}`} />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
+
+                {/* Money Back Guarantee */}
+                <div className={`w-full py-3 px-4 rounded-xl border ${plan.featured ? 'border-xmas-gold/50 bg-xmas-gold/5' : 'border-xmas-red/50 bg-xmas-red/5'} flex items-center justify-center gap-2 mb-4`}>
+                  <Shield className={`w-4 h-4 ${plan.featured ? 'text-xmas-gold' : 'text-xmas-red'}`} />
+                  <span className={`text-sm font-body font-semibold ${plan.featured ? 'text-xmas-gold' : 'text-xmas-red'}`}>
+                    Garantie Remboursement
+                  </span>
+                </div>
+
+                {/* CTA Button */}
+                <a href={plan.link} target="_blank" rel="noopener noreferrer">
+                  <Button
+                    className={`w-full py-6 text-lg rounded-xl font-body font-bold group ${
+                      plan.featured
+                        ? 'bg-xmas-gold hover:bg-xmas-gold/90 text-background'
+                        : 'bg-xmas-red hover:bg-xmas-red/90 text-white'
+                    }`}
+                  >
+                    <Zap className="w-5 h-5 mr-2" />
+                    Obtenir Platinum
+                  </Button>
+                </a>
               </div>
-            </div>
+            ))}
           </div>
         </ScrollReveal>
       </div>
