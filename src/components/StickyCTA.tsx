@@ -20,12 +20,37 @@ const StickyCTA = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 500);
+      const scrollY = window.scrollY;
+      
+      // Get the pricing and platinum sections
+      const pricingSection = document.getElementById('pricing');
+      const platinumSection = document.getElementById('platinum');
+      
+      // Check if currently viewing pricing or platinum sections
+      let isInHiddenSection = false;
+      
+      if (pricingSection) {
+        const pricingRect = pricingSection.getBoundingClientRect();
+        if (pricingRect.top <= window.innerHeight && pricingRect.bottom >= 0) {
+          isInHiddenSection = true;
+        }
+      }
+      
+      if (platinumSection) {
+        const platinumRect = platinumSection.getBoundingClientRect();
+        if (platinumRect.top <= window.innerHeight && platinumRect.bottom >= 0) {
+          isInHiddenSection = true;
+        }
+      }
+      
+      // Show if scrolled past 500px AND not in hidden sections
+      setIsVisible(scrollY > 500 && !isInHiddenSection);
     };
 
     const timer = setInterval(() => setTimeLeft(calculateTimeLeft()), 1000);
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial state
     return () => {
       window.removeEventListener('scroll', handleScroll);
       clearInterval(timer);
@@ -52,7 +77,7 @@ const StickyCTA = () => {
           </span>
         </div>
       </div>
-      <a href="#pricing">
+      <a href="#platinum">
         <Button className="w-full btn-xmas rounded-full py-6 text-base font-body shadow-2xl group">
           <Gift className="w-5 h-5 mr-2 animate-bounce-slow" />
           🎄 Commander - 60% Rabais
