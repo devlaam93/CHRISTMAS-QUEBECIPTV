@@ -14,7 +14,7 @@ const PlatinumSection = () => {
       perMonth: '5.83',
       icon: Zap,
       link: 'https://quebeciptv.ca/step/checkout-12-months-iptv-subscriptions-2/',
-      features: ['15 000+ Chaînes', '60 000+ Films & Séries', 'Qualité FHD/HD', 'Netflix, Prime, Disney+', 'Apps Gratuites', 'Support 24/7']
+      features: ['15 000+ Chaînes', '60 000+ Films & Séries', 'Qualité FHD/HD', 'Netflix, Prime, Disney+ & more', 'Apps Gratuites', 'Support 24/7']
     },
     { 
       type: 'premium',
