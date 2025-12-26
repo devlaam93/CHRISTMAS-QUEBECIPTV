@@ -86,7 +86,7 @@ const HeroSection = () => {
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
-            <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer">
+            <a href="https://quebeciptv.ca/obtenez-votre-essai-gratuit/" target="_blank" rel="noopener noreferrer">
               <Button className="btn-green rounded-full px-10 py-7 text-lg font-body shadow-xl">
                 🎄 Essai Gratuit 24H
               </Button>
