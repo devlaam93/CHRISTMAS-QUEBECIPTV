@@ -27,7 +27,7 @@ const PlatinumSection = () => {
       popular: true,
       icon: Crown,
       link: 'https://quebeciptv.ca/step/checkout-12-months-iptv-premium-subscriptions-2/',
-      features: ['30 000+ Chaînes', '120K+ Films & Séries', 'Qualité 8K/4K/UHD', 'Netflix, Prime, Disney+', 'Protection VPN', 'Support Prioritaire']
+      features: ['30 000+ Chaînes', '120K+ Films & Séries', 'Qualité 8K/4K/UHD', 'Netflix, Prime, Disney+ et plus', 'Protection VPN', 'Support Prioritaire']
     },
   ];
 
