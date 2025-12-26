@@ -4,6 +4,7 @@ import ChannelCarousel from '@/components/ChannelCarousel';
 import PlatinumBanner from '@/components/PlatinumBanner';
 import PlatinumExclusiveSection from '@/components/PlatinumExclusiveSection';
 import PlatinumSection from '@/components/PlatinumSection';
+import SavingsCalculator from '@/components/SavingsCalculator';
 import FeaturesSection from '@/components/FeaturesSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import FAQSection from '@/components/FAQSection';
@@ -23,6 +24,7 @@ const Index = () => {
         <PlatinumBanner />
         <PlatinumExclusiveSection />
         <PlatinumSection />
+        <SavingsCalculator />
         <FeaturesSection />
         <TestimonialsSection />
         <FAQSection />
