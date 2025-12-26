@@ -45,9 +45,13 @@ const Header = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-semibold text-muted-foreground hover:text-xmas-red transition-colors font-body"
+                  className={`text-sm font-semibold transition-colors font-body ${
+                    link.label === 'Platinum' 
+                      ? 'bg-gradient-to-r from-purple-400 via-pink-400 to-xmas-gold bg-clip-text text-transparent hover:from-purple-300 hover:via-pink-300 hover:to-xmas-gold animate-pulse' 
+                      : 'text-muted-foreground hover:text-xmas-red'
+                  }`}
                 >
-                  {link.label}
+                  {link.label === 'Platinum' ? '💎 ' + link.label : link.label}
                 </a>
               ))}
             </nav>
@@ -80,10 +84,14 @@ const Header = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-semibold text-muted-foreground hover:text-xmas-red transition-colors py-2 font-body"
+                  className={`text-sm font-semibold transition-colors py-2 font-body ${
+                    link.label === 'Platinum' 
+                      ? 'bg-gradient-to-r from-purple-400 via-pink-400 to-xmas-gold bg-clip-text text-transparent' 
+                      : 'text-muted-foreground hover:text-xmas-red'
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  {link.label}
+                  {link.label === 'Platinum' ? '💎 ' + link.label : link.label}
                 </a>
               ))}
               <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer">
