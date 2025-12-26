@@ -59,7 +59,7 @@ const Header = () => {
             </nav>
 
             <div className="hidden lg:block">
-              <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer">
+              <a href="https://quebeciptv.ca/obtenez-votre-essai-gratuit/" target="_blank" rel="noopener noreferrer">
                 <Button className="btn-xmas rounded-full px-6 font-body">
                   Essai Gratuit 🎁
                 </Button>
@@ -67,7 +67,7 @@ const Header = () => {
             </div>
 
             <div className="flex items-center gap-3 lg:hidden">
-              <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer" className="hidden sm:block">
+              <a href="https://quebeciptv.ca/obtenez-votre-essai-gratuit/" target="_blank" rel="noopener noreferrer" className="hidden sm:block">
                 <Button size="sm" className="btn-xmas rounded-full text-xs font-body">
                   Essai 🎁
                 </Button>
@@ -97,7 +97,7 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <a href="https://api.whatsapp.com/send/?phone=14508040166" target="_blank" rel="noopener noreferrer">
+              <a href="https://quebeciptv.ca/obtenez-votre-essai-gratuit/" target="_blank" rel="noopener noreferrer">
                 <Button className="btn-xmas rounded-full w-full mt-2 font-body">
                   Essai Gratuit 🎁
                 </Button>
