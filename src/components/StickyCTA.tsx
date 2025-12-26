@@ -79,10 +79,10 @@ const StickyCTA = () => {
           </span>
         </div>
       </div>
-      <a href="#platinum">
-        <Button className="w-full bg-gradient-to-r from-xmas-gold via-yellow-500 to-xmas-gold text-background rounded-full py-6 text-base font-body shadow-2xl group hover:shadow-[0_0_30px_hsl(var(--xmas-gold)/0.6)] transition-all duration-300">
-          <Crown className="w-5 h-5 mr-2 animate-bounce-slow" />
-          👑 Platinum - 30,000+ Chaînes | 60% OFF
+      <a href="#platinum" className="block">
+        <Button className="w-full bg-gradient-to-r from-xmas-gold via-yellow-400 to-xmas-gold text-background rounded-full py-5 text-sm sm:text-base font-bold font-body shadow-[0_8px_32px_hsl(var(--xmas-gold)/0.4)] hover:shadow-[0_12px_40px_hsl(var(--xmas-gold)/0.6)] hover:scale-[1.02] transition-all duration-300 border-2 border-yellow-300/50">
+          <Crown className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" />
+          <span className="truncate">Platinum 30K+ Chaînes • 60% OFF</span>
         </Button>
       </a>
     </div>
